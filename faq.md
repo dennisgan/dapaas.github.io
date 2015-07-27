@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Faq
+title: FAQ
 permalink: /faq/
 weight: 12
 ---
