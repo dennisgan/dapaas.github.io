@@ -92,8 +92,14 @@ a.mdl-layout-title {
     footer {
         margin-top:40px;
         width:100%;
-        padding-left:120px;
-        padding-right:90px;
+
+        .mdl-mega-footer--bottom-section {
+            margin:0 30px 5px 30px
+        }
+
+        .mdl-mega-footer--link-list {
+            margin-bottom:0;
+        }
     }
 }
 
