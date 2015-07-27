@@ -61,7 +61,7 @@ Currently DataGraft is owned by the DaPaaS consortium. Discussions are ongoing o
 
 #### Is it free to use DataGraft?
 
-For now, yes. Though, there are certain limitations (e.g. hosting up to 1GB of data). If you find DataGraft useful and you are interested to use it beyond its current limitations please [get in touch with us](http://project.dapaas.eu/dapaas-contact-us). 
+For now, yes. Though, there are certain limitations (e.g. hosting/transforming up to 10MB of data). If you find DataGraft useful and you are interested to use it beyond its current limitations please [get in touch with us](http://project.dapaas.eu/dapaas-contact-us). 
 
 #### What is the status of the DataGraft development?
 
