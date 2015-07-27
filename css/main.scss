@@ -50,12 +50,20 @@ $on-laptop:        800px;
         "syntax-highlighting"
 ;
 
+a,
+.mdl-mega-footer--link-list a,
+.mdl-mega-footer__link-list a {
+color:rgb(105,240,174);
+}
 a:visited {
-    color:#aaa;
+color:rgb(104, 206, 156);
 }
 
 .dapaas-header.mdl-layout__header {
   background-color:#5264AE;
+a:visited {
+    color:white;
+}
 }
 
 a.mdl-layout-title {
@@ -84,8 +92,8 @@ a.mdl-layout-title {
     footer {
         margin-top:40px;
         width:100%;
-        padding-left:100px;
-        padding-right:60px;
+        padding-left:120px;
+        padding-right:90px;
     }
 }
 
