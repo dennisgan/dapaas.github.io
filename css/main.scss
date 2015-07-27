@@ -1,0 +1,110 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: white;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "syntax-highlighting"
+;
+
+a:visited {
+    color:#aaa;
+}
+
+.dapaas-header.mdl-layout__header {
+  background-color:#5264AE;
+}
+
+a.mdl-layout-title {
+    color:white;
+}
+
+.mdl-layout__drawer a.mdl-layout-title {
+    color:inherit;
+}
+
+@include media-query($on-palm) {
+    .dapaas-header .mdl-navigation {
+        display:none;
+    }
+}
+
+.dapaas-layout-content {
+    padding-top:20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+    & > div {
+        flex-grow:1;
+    }
+    footer {
+        margin-top:40px;
+        width:100%;
+        padding-left:100px;
+        padding-right:60px;
+    }
+}
+
+.post-content {
+    // margin:0 40px;
+    max-width:800px;
+    margin: auto 40px;
+}
+
+.post-header {
+    margin:0 40px;
+}
+
+
+iframe.dapaas-iframe {
+    flex-grow:1;
+    height:auto;
+}
+
+.dapaas-iframe-layout {
+    display: flex;
+}
