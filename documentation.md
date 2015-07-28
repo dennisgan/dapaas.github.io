@@ -9,4 +9,4 @@ weight: 2
 
 The following video demonstrates how Grafterizer can be used to clean and transform tabular data.
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/PMim5BNqUag" frameborder="0" allowfullscreen></iframe>
+<iframe width="680" height="382" src="https://www.youtube.com/embed/PMim5BNqUag" frameborder="0" allowfullscreen></iframe>
