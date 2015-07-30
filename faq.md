@@ -43,6 +43,10 @@ The current version of DataGraft handles tabular data (CSV) and RDF data (i.e. y
  * If you are interested in tabular data transformations (e.g. cleaning of tabular data, sharing of transformations, etc.), no special skills are required, depending on the complexity of the transformations you want to perform. Currently DataGraft supports an number of predefined data transformations, with more to be added in the near future.
  * If you are interested in publication of RDF data and access to RDF data, familiarity with RDF and SPARQL are needed.
 
+#### Is there any documentation for DataGraft?
+
+Yes, draft documentation is available [here] (http://dapaas.github.io/documentation/). Documentation will be further improved in the upcoming period.
+
 #### I am a developer and interested to transform and host my data with DataGraft. Do I have API access to DataGraft capabilities?
 
 Yes, most DataGraft capabilities are accessible at the API level. These include programmatic access to datasets and data transformation catalogues (adding, removing datasets and transformations), querying data, and executing data transformations. See the [API documentation](http://dapaas.github.io/documentation/) for further details.
