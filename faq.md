@@ -61,7 +61,7 @@ DataGraft has been primarily funded by the European Commission (EC) through [the
 
 #### Who is the owner of DataGraft?
 
-Currently DataGraft is owned by the DaPaaS consortium. Discussions are ongoing on future development of DataGraft after the completion of the DaPaaS project at the end of October 2015. Most likely the development will continue under [the proDataMarket project](http://prodatamarket.eu/) or a commercial entity will continue the maintenance and development.
+Currently DataGraft is owned by the DaPaaS consortium. Discussions are ongoing on future development of DataGraft after the completion of the DaPaaS project at the end of October 2015. Most likely the development will continue under the [proDataMarket project](http://prodatamarket.eu/) or a commercial entity will continue the maintenance and development.
 
 #### Is it free to use DataGraft?
 
