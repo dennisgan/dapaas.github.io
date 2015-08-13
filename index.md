@@ -1,6 +1,6 @@
 ---
 layout: mainpage
-title: Datagraft 
+title: One stop shop for hosted data management
 permalink: /
 hidenInHeader: true
 ---
@@ -8,7 +8,7 @@ hidenInHeader: true
 <div class="first-screen mdl-grid">
 
 <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
-<div class="mdl-cell mdl-cell--3-col mdl-cell--middle mdl-cell--12-col-tablet" markdown="1">
+<div class="mdl-cell mdl-cell--3-col mdl-cell--middle mdl-cell--12-col-tablet mdl-cell--12-col-phone" markdown="1">
 
 ## One stop shop for hosted data management
 

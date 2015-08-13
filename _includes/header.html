@@ -1,9 +1,11 @@
 {% assign pages = site.pages | where: "hidenInHeader",nil | sort:"weight"  %}
 <header class="dapaas-header mdl-layout__header mdl-layout__header--waterfall">
     <div class="mdl-layout__header-row">
-        <a class="mdl-layout-title" href="{{ site.baseurl }}/">
-        {{ site.title }}
+        <!-- <nav class="mdl-navigation"> -->
+        <a class="mdl-navigation__link mdl-layout-title datagraft-main-title" href="{{ site.baseurl }}/">
+          {{ site.title }}
         </a>
+        <!-- </nav> -->
         <!-- Add spacer, to align navigation to the right in desktop -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation -->

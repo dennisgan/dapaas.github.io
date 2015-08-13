@@ -118,6 +118,7 @@ a.mdl-layout-title {
 iframe.dapaas-iframe {
     flex-grow:1;
     height:auto;
+    height:100%;
 }
 
 .dapaas-iframe-layout {
@@ -192,7 +193,7 @@ iframe.dapaas-iframe {
 .third-screen {
     min-height:30em;
     min-height:87vh;
-    background:#F2F2F2 url("../images/bg.jpeg") no-repeat;
+    background:#F2F2F2 url(../images/bg.jpeg) no-repeat;
     background-position: cover;
     background-position: center center;
 }
@@ -208,8 +209,10 @@ h1, h2, .mdl-layout-title, .mdl-button {
 .sign-up, .sign-in {
     border-radius: 50px;
     border: 2px solid transparent;
+    margin-bottom: 10px;
     &:hover {
         text-decoration: initial;
+        color:rgb(103,58,183);
     }
 }
 
@@ -241,6 +244,7 @@ h1, h2, .mdl-layout-title, .mdl-button {
     a.mdl-button--raised.mdl-button--colored:hover {
         background:rgb(103,58,183);
         color:white;
+        text-decoration: initial;
     }
 }
 
@@ -269,3 +273,15 @@ $whiteSpace: 50px;
 .white-space-right {
     padding-right:$whiteSpace;
 }
+
+.datagraft-main-title {
+    background: transparent url(../images/logo.png) no-repeat left center;
+
+    &.mdl-navigation__link {
+        padding-left: 65px;
+    }
+}
+
+/*.mdl-layout__header-row {
+    padding-left: 56px;
+}*/
