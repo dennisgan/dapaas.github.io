@@ -36,9 +36,9 @@ Host and share datasets and transformations in our cloud based catalog.
 
 <div id="howItWorks" class="second-screen mdl-grid">
 <div class="mdl-cell mdl-cell--1-col"></div>
-<div class="mdl-cell mdl-cell--9-col mdl-cell--middle">
+<div class="mdl-cell mdl-cell--10-col mdl-cell--middle">
 <div class="mdl-grid white-space-top white-space-bottom">
-<div class="mdl-cell mdl-cell--6-col white-space-right" markdown="1">
+<div class="mdl-cell mdl-cell--5-col " markdown="1">
 
 ### Flexible management and sharing of data and transformations
 
@@ -49,16 +49,18 @@ Fork, reuse and extend transformations built by other professionals from our pub
 API access to public or private datasets and transformations.
 
 </div>
-<div class="mdl-cell mdl-cell--6-col white-space-left">
+<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+<div class="mdl-cell mdl-cell--5-col">
     <iframe width="420" height="315" src="https://www.youtube.com/embed/PMim5BNqUag" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
 <br>
 <div class="mdl-grid white-space-bottom">
-<div class="mdl-cell mdl-cell--6-col white-space-right">
+<div class="mdl-cell mdl-cell--5-col">
     <iframe width="420" height="315" src="https://www.youtube.com/embed/PMim5BNqUag" frameborder="0" allowfullscreen></iframe>
 </div>
-<div class="mdl-cell mdl-cell--6-col white-space-left" markdown="1">
+<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+<div class="mdl-cell mdl-cell--5-col" markdown="1">
 
 ### Reliable data hosting and querying services
 

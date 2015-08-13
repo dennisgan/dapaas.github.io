@@ -230,6 +230,7 @@ h1, h2, .mdl-layout-title, .mdl-button {
 
 .start-using-now {
     text-align: center;
+    text-decoration: initial;
 
     a.mdl-button--raised.mdl-button--colored {
         background:white;
@@ -244,8 +245,9 @@ h1, h2, .mdl-layout-title, .mdl-button {
 }
 
 .last-screen {
-    background:#50667f;
+    background:rgb(94, 60, 154);
     min-height:200px;
+    font-size:small;
 }
 
 .white-space-is-good {
