@@ -19,7 +19,7 @@ Reuse transformations to repeatably clean and transform spreadsheet data.
 Host and share datasets and transformations in our cloud based catalog.
 
 <br>
-<a href="https://datagraft.net/" class="mdl-button mdl-js-button mdl-button--raised sign-up">
+<a href="https://datagraft.net/pages/register" class="mdl-button mdl-js-button mdl-button--raised sign-up">
   Sign up
 </a>
 <a href="#howItWorks" class="mdl-button mdl-js-button  sign-in">
@@ -77,7 +77,7 @@ Visualise your data with our SPARQL based chart builder.
 <div class="third-screen mdl-grid">
 
 <div class="mdl-cell mdl-cell--middle mdl-cell--12-col start-using-now">
-    <a href="https://datagraft.net/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored start-using-now">
+    <a href="https://datagraft.net/pages/register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored start-using-now">
       Start using Datagraft now
     </a>
 </div>
