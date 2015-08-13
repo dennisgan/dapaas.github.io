@@ -85,13 +85,15 @@ Visualise your data with our SPARQL based chart builder.
 </div>
 
 <div class="last-screen mdl-grid">
-    <div class="photoby mdl-cell mdl-cell--bottom">
-      Photo by <a href="https://www.flickr.com/photos/jorneriksson/" target="_blank">Jørn Eriksson</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>)
-      </div>
+<div class="mdl-cell mdl-cell--bottom" markdown="1">
 
-<div class="mdl-cell" markdown="1">
-
-*Work in progress*
+DataGraft is a product of [DaPaaS](//dapaas.eu), project co-founded by the EC under 7th Framework Programme (FP7 2007-2013)
 
 </div>
+<div class="photoby mdl-cell mdl-cell--bottom" markdown="1">
+<p>
+Photo by <a href="https://www.flickr.com/photos/jorneriksson/" target="_blank">Jørn Eriksson</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>)
+</p>
+</div>
+
 </div>
