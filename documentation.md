@@ -4,7 +4,9 @@ title: Documentation
 permalink: /documentation/
 weight: 2
 ---
-[Download pdf](https://github.com/dapaas/dapaas.github.io/tree/master/images/documentation/DataGraft.pdf)
+[Download pdf](http://dapaas.github.io/images/documentation/DataGraft.pdf)
+
+
 ## Platform overview
 The most demonstrable way to get an overview of what can be done with help of DataGraft platform is to explore data pages and data transformations that other users of this platform chose to share. The two terms mentioned above, **data pages** and **data transformations**, are two main concepts you work with while using DataGraft platform, therefore it may be useful to understand what each of them means in a context of the service. 
 
