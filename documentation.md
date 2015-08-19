@@ -42,6 +42,7 @@ Publishing data with help of DataGraft platform is rather simple process. You ca
 ![Upload data](http://dapaas.github.io/images/documentation/upload.png)
 
 After data is succesfully uploaded(this is indicated by green mark in the top right corner of a file icon) you have several options:
+
 1. Create data page from a row data without applying any transformation on it.
 2. Transform your data before creating a datapage. This in turn can be done in two ways	
   1. By creating a new transformation to use on your data
