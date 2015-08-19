@@ -6,6 +6,7 @@
 
 // Our variables
 $base-font-family: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+$base-font-family-p: Roboto, Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -208,8 +209,12 @@ a.mdl-layout-title:hover {
     text-decoration: initial;
 }
 
-h1, h2, .mdl-layout-title, .mdl-button {
+h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
     font-family: $base-font-family;
+}
+
+.mdl-layout__content:not(.layout__mainpage) p {
+    font-family: $base-font-family-p;
 }
 
 .sign-up, .sign-in {
