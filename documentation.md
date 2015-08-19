@@ -31,7 +31,6 @@ In order to create your own data pages and transformations through a platform, y
 ## User Dashboard
 User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of your data pages and transformations you have created. 
 
-
 ##  <a name="publish"></a>Publishing data 
 Publishing data with help of DataGraft platform is rather simple process. You may start by switching to a ![Publish tab](http://dapaas.github.io/images/documentation/publish.png) tab in a main menu. The first thing you do is uploading data. To do so you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
 ![Upload data](http://dapaas.github.io/images/documentation/upload.png)
@@ -46,8 +45,8 @@ After data is succesfully uploaded(this is indicated by green mark in the top ri
 	
 Let's go through the most simple scenario by choosing the first alternative. To do this you just click ![Create datapage from row data](http://dapaas.github.io/images/documentation/createraw.png) button. This automatically takes you to the next page where you specify data page properties(see [Data page properties](#datapagemeta)). After everything is in order, you simply click  ![Create datapage](http://dapaas.github.io/images/documentation/createdatapage.png). And that's it, you have just created your very first data page. Now you (and other users in case if you defined this data page as public) have access to the data page, are able to download associated data, add more information and features to the created asset.
 
-However in most cases you still need to process your data before publishing it. In this case you should use the transformation service. By clicking ![Create using new transformation](http://dapaas.github.io/images/documentation/createusingnewtransformation.png) button you may start transforming your data. Details on how data transformations are created are given in Section [Data cleaning and transformation](#transform).
 
+However in most cases you still need to process your data before publishing it. In this case you should use the transformation service. By clicking ![Create using new transformation](http://dapaas.github.io/images/documentation/createusingnewtransformation.png) button you may start transforming your data. Details on how data transformations are created are given in Section [Data cleaning and transformation](#transform).
 
 
 ##  <a name="transform></a>Data cleaning and transformation
