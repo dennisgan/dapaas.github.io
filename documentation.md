@@ -31,14 +31,14 @@ To explore data pages and data transformations created by other users go to the 
 ![Explore transformation](http://dapaas.github.io/images/documentation/exploretransformation1.png)
 
 
-## User Registration
+#### User Registration
 In order to use public or create your own data pages and transformations through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) .
 
-## User Dashboard
-User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of your data pages and transformations you have created. 
+#### Dashboard
+User darshboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of your data pages and transformations you have created. From here you can search through your assets, delete them, edit their properties; fork and execute transformations and download data associated with data pages.
 
 ##  <a name="publish"></a>Publishing data 
-Publishing data with help of DataGraft platform is rather simple process. You may start by switching to a ![Publish tab](http://dapaas.github.io/images/documentation/publish.png) tab in a main menu. The first thing you do is uploading data. To do so you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
+Publishing data with help of DataGraft platform is rather simple process. You can create a datapage from several different points. You may start by switching to a ![Publish tab](http://dapaas.github.io/images/documentation/publish.png) tab in a main menu. The first thing you do is uploading data. To do so you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
 ![Upload data](http://dapaas.github.io/images/documentation/upload.png)
 
 After data is succesfully uploaded(this is indicated by green mark in the top right corner of a file icon) you have several options:
