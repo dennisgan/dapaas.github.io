@@ -55,7 +55,7 @@ Let's go through the most simple scenario by choosing the first alternative. To 
 However in most cases you still need to process your data before publishing it. In this case you should use the transformation service. By clicking ![Create using new transformation](http://dapaas.github.io/images/documentation/createusingnewtransformation.png) button you may start transforming your data. Details on how data transformations are created are given in Section [Data cleaning and transformation](#transform).
 
 
-##  <a name="transform></a>Data cleaning and transformation
+##  <a name="transform"></a>Data cleaning and transformation
 This section explains how tabular data is transformed in DataGraft platform and gives you the best strategies for data transformation.
 
 In the basis of DataGraft data transformations there lies a Grafter DSL(Domain Specific Language), which in its turn is implemented in Clojure. Therefore, to take maximum advantage of the service, one should be acquainted with mentioned languages. However number of transformations, depending on their complexity, can be done through intuitive and user-friendly GUI without any coding.
