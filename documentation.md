@@ -11,29 +11,28 @@ weight: 2
 The most demonstrable way to get an overview of what can be done with help of DataGraft platform is to explore data pages and data transformations that other users of this platform chose to share. The two terms mentioned above, **data pages** and **data transformations**, are two main concepts you work with while using DataGraft platform, therefore it may be useful to understand what each of them means in a context of the service. 
 
 ### Data pages
-Data pages contain cleaned and transformed data you want to publish. Each data page is stored with some metadata, including data page name; short description; keywords, describing a data page; owner; creation date and public/private property (see [Publishing data] section). The latter is defined by data page owner and specifies whether this data page can be explored by other users of a platform or not. 
+Data pages contain cleaned and transformed data you want to publish. Each data page is stored with some metadata, including data page name; short description; keywords, describing a data page; owner; creation date and public/private property (see [Publishing data](#publish) section). The latter is defined by data page owner and specifies whether this data page can be explored by other users of a platform or not. 
 
-[Data page properties]:
-![Data page properties](http://dapaas.github.io/images/documentation/datapagemeta.png)
+<a name="datapagemeta"></a>![Data page properties](http://dapaas.github.io/images/documentation/datapagemeta.png)
 
-Users that have access to the data page (i.e. just owners in case of private pages and everyone else for public pages) can locally download information associated with a data page in a raw tabular format by pressing ![Export row data](http://dapaas.github.io/images/documentation/exportrow.png) button; or as RDF by pressing ![Export RDF data](http://dapaas.github.io/images/documentation/exportpdf.png). The list of supported RDF formats includes RDF/XML(.rdf), n-triple(.nt), turtle(.ttl), n3(.n3), nquads(.nq), RDF/JSON(.rj).
+Users that have access to the data page (i.e. just owners in case of private pages and everyone else for public pages) can locally download information associated with a data page in a raw tabular format by pressing ![Export row data](http://dapaas.github.io/images/documentation/exportraw.png) button; or as RDF by pressing ![Export RDF data](http://dapaas.github.io/images/documentation/exportrdf.png). The list of supported RDF formats includes RDF/XML(.rdf), n-triple(.nt), turtle(.ttl), n3(.n3), nquads(.nq), RDF/JSON(.rj).
   
 
 ### Data transformations
 Another type of asset that users may create and share in DataGraft is data transformation. Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called data transformation. The greatest thing about data transformations in DataGraft platform is that you may reuse them repeatably on another datasets, share them with other users, modify existing transformations and create new transformations by extending ones that you or other users created and shared.
-As well as data pages, data transformations are stored with some metadata. The transformation properties include transformation name, description, owner and public/private property. They are defined on a data transformation creation stage(see [Data cleaning and transformation] section).
+As well as data pages, data transformations are stored with some metadata. The transformation properties include transformation name, description, owner and public/private property. They are defined on a data transformation creation stage(see [Data cleaning and transformation](#transform) section).
 
 To explore data pages and data transformations created by other users go to the "Explore" tab. Here you can see a list of public assets.
 
 
 ## User Registration
-In order to create your own data pages and transformations through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data] .
+In order to create your own data pages and transformations through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) .
 
 ## User Dashboard
 User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of your data pages and transformations you have created. 
 
 [Publishing data]: 
-##  Publishing data 
+##  <a name="publish"></a>Publishing data 
 Publishing data with help of DataGraft platform is rather simple process. You may start by switching to a ![Publish tab](http://dapaas.github.io/images/documentation/publish.png) tab in a main menu. The first thing you do is uploading data. To do so you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
 ![Upload data](http://dapaas.github.io/images/documentation/upload.png)
 
@@ -45,13 +44,13 @@ After data is succesfully uploaded(this is indicated by green mark in the top ri
 
 	
 	
-Let's go through the most simple scenario by choosing the first alternative. To do this you just click ![Create datapage from row data](http://dapaas.github.io/images/documentation/createraw.png) button. This automatically takes you to the next page where you specify data page properties(see [Data page properties]). After everything is in order, you simply click  ![Create datapage](http://dapaas.github.io/images/documentation/createdatapage.png). And that's it, you have just created your very first data page. Now you (and other users in case if you defined this data page as public) have access to the data page, are able to download associated data, add more information and features to the created asset.
+Let's go through the most simple scenario by choosing the first alternative. To do this you just click ![Create datapage from row data](http://dapaas.github.io/images/documentation/createraw.png) button. This automatically takes you to the next page where you specify data page properties(see [Data page properties](#datapagemeta)). After everything is in order, you simply click  ![Create datapage](http://dapaas.github.io/images/documentation/createdatapage.png). And that's it, you have just created your very first data page. Now you (and other users in case if you defined this data page as public) have access to the data page, are able to download associated data, add more information and features to the created asset.
 
-However in most cases you still need to process your data before publishing it. In this case you should use the transformation service. By clicking ![Create using new transformation](http://dapaas.github.io/images/documentation/createusingnewtransformation.png) button you may start transforming your data. Details on how data transformations are created are given in Section [Data cleaning and transformation].
+However in most cases you still need to process your data before publishing it. In this case you should use the transformation service. By clicking ![Create using new transformation](http://dapaas.github.io/images/documentation/createusingnewtransformation.png) button you may start transforming your data. Details on how data transformations are created are given in Section [Data cleaning and transformation](#transform).
 
 
-[Data cleaning and transformation]:
-##  Data cleaning and transformation
+
+##  <a name="transform></a>Data cleaning and transformation
 This section explains how tabular data is transformed in DataGraft platform and gives you the best strategies for data transformation.
 
 In the basis of DataGraft data transformations there lies a Grafter DSL(Domain Specific Language), which in its turn is implemented in Clojure. Therefore, to take maximum advantage of the service, one should be acquainted with mentioned languages. However number of transformations, depending on their complexity, can be done through intuitive and user-friendly GUI without any coding.
@@ -142,7 +141,7 @@ The "Take/Drop Columns" function narrows given dataset. You may explicitly defin
 
 This function creates a new column in a dataset by applying some transformation to existing column(or columns). To use this function you should specify name for a new column, define one or several columns you are going to use to obtain new value and specify a function you apply to them. This function can be chosen from a drop-down list, which contains some standard functions and custom utility functions. For your convenience these functions are grouped together based on type of operation they perform. 
 
-If you think that functionality ordered by standard provided functions is not enough to build your transformation, you may define custom utility functions by yourself using Clojure code(see [Defining Auxiliary Functions] section) or use utility functions written by other users. 
+If you think that functionality ordered by standard provided functions is not enough to build your transformation, you may define custom utility functions by yourself using Clojure code(see [Defining Auxiliary Functions](#customfuns) section) or use utility functions written by other users. 
 
 Some of functions may expect input parameters in addition to columns, they will operate on. If this is the case, you may specify such a parameter by pressing ![add parameter](http://dapaas.github.io/images/documentation/plus.png) icon and entering parameter in a field that appears.
 
@@ -197,8 +196,8 @@ Finally, you may filter dataset by applying utility functions to columns. Note, 
 
 The priority of listed option is defined as they appear - from top to down: if "Text to match" field is specified, other fields are ignored, if "Text to match" is ignored, but "Regular expression" is defined -- this one will be used to filter your dataset ignoring functions below(if specified any).
 
-[Defining Auxiliary Functions]:
-###  Defining Auxiliary Functions 
+
+###  <a name="customfuns"></a>Defining Auxiliary Functions 
 
 Some complex transformations cannot be done with help of operations described above. In this case you may need to define your own pipeline functions. This can be done with help of "Custom code" option using Clojure language
 
