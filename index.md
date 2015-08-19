@@ -13,7 +13,7 @@ hidenInHeader: true
 
 Powerful data transformation and reliable data access capabilities
 
-For data workers to manage their data in a simple, effective, and efficient way
+…for data workers to manage their data in a simple, effective, and efficient way
 
 <br>
 <a href="https://datagraft.net/pages/register" class="mdl-button mdl-js-button mdl-button--raised sign-up">
