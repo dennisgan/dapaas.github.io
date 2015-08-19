@@ -16,17 +16,23 @@ Data pages contain cleaned and transformed data you want to publish. Each data p
 <a name="datapagemeta"></a>![Data page properties](http://dapaas.github.io/images/documentation/datapagemeta.png)
 
 Users that have access to the data page (i.e. just owners in case of private pages and everyone else for public pages) can locally download information associated with a data page in a raw tabular format by pressing ![Export row data](http://dapaas.github.io/images/documentation/exportraw.png) button; or as RDF by pressing ![Export RDF data](http://dapaas.github.io/images/documentation/exportrdf.png). The list of supported RDF formats includes RDF/XML(.rdf), n-triple(.nt), turtle(.ttl), n3(.n3), nquads(.nq), RDF/JSON(.rj).
-  
+
+Data pages containing RDF also allow you to perform SPARQL querying on data they contain.  
+
+![Export RDF data](http://dapaas.github.io/images/documentation/sparql.png)
+
 
 ### Data transformations
 Another type of asset that users may create and share in DataGraft is data transformation. Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called data transformation. The greatest thing about data transformations in DataGraft platform is that you may reuse them repeatably on another datasets, share them with other users, modify existing transformations and create new transformations by extending ones that you or other users created and shared.
 As well as data pages, data transformations are stored with some metadata. The transformation properties include transformation name, description, owner and public/private property. They are defined on a data transformation creation stage(see [Data cleaning and transformation](#transform) section).
 
-To explore data pages and data transformations created by other users go to the "Explore" tab. Here you can see a list of public assets.
+To explore data pages and data transformations created by other users go to the ![Explore tab](http://dapaas.github.io/images/documentation/explore.png) tab. Here you can see a list of public assets. You may receive basic information about any public data page or data transformation by clicking its name. If in a process of exploring data transformation you find it to be suitable for your needs, you can apply it to your data directly from the explore view. To do so you just drag and drop your datafile in the white frame with "Create data page" label. If you want to make some changes to the transformation before you use it or just find it interesting and want to explore it in detail, use ![Fork transformation](http://dapaas.github.io/images/documentation/fork.png) button. Transformation will be copied to the list of your transformations.  
+
+![Explore transformation](http://dapaas.github.io/images/documentation/exploretransformation1.png)
 
 
 ## User Registration
-In order to create your own data pages and transformations through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) .
+In order to use public or create your own data pages and transformations through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) .
 
 ## User Dashboard
 User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of your data pages and transformations you have created. 
