@@ -10,8 +10,9 @@ weight: 2
 2. [Data pages](#data_pages)
 3. [User registration](#user_registration)
 4. [Dashboard](#dashboard)
-5. [Publishing data](#publish)
-6. [Data cleaning and transfotmation](#transform)
+5. [The workflow overview](#workflow) 
+6. [Publishing data](#publish)
+7. [Data cleaning and transfotmation](#transform)
    * [Transformation metadata](#transform_meta)
    * [Transformation preview](#transform_preview)
    * [Constructing transformation pipeline](#transform_pipeline)
@@ -69,9 +70,27 @@ In order to use public or create your own data pages and transformations through
 ###	 <a name="dashboard"></a>Dashboard
 User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of data pages and transformations you have created. From here you can search through your assets, delete them, edit their properties; fork and execute transformations and download data associated with data pages.
 
-##  <a name="publish"></a>Publishing data
+##  <a name="workflow"></a>The workflow overview
+
+There are a lot of things that can be done with help of DataGraft portal. To give you a general overview of DataGraft functionality here is a summary of possible scenarios 
+
 
 ![Workflows](http://dapaas.github.io/images/documentation/workflows.jpg)
+
+First, if you are interested in publishing your data in form of Linked Data and already have its RDF representation, you can simply upload it to the platform and create a data page.
+
+If data you are working with is in tabular format, there are more alternatives. First one is creating data page from raw tabular data. It is as simple process as creating data page from RDF data and can be done just in few clicks (see [Publish data](#publish) for details). 
+In case when your tabular data needs to go through some transformations, you can create data transformation and apply it to data. This may include dataset modification, data conversion from tabular to RDF form or both these procedures in one transformation. If all that you want is to transform data, on this stage you can download processed data to your computer, either in tabular or in linked data form. Alternatively you may go further and publish transformed data as a data page.
+
+## <a name="video"></a>Grafterizer workflow demonstration
+
+The following video demonstrates how Grafterizer can be used to clean and transform tabular data.
+
+<iframe width="680" height="382" src="https://www.youtube.com/embed/PMim5BNqUag" frameborder="0" allowfullscreen></iframe>
+
+##  <a name="publish"></a>Publishing data
+
+
 
  
 Publishing data with help of DataGraft platform is a rather simple process. You can create a data page from several different points. You may start by switching to a ![Publish tab](http://dapaas.github.io/images/documentation/publish.png) tab in a main menu. The first thing you do when creating a data page this way is uploading data. To do so, you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
@@ -283,7 +302,7 @@ The first step here  would be to specify base the graph URI. To create and edit 
 
 
 
-## Grafterizer workflow demonstration
+## <a name="video"></a>Grafterizer workflow demonstration
 
 The following video demonstrates how Grafterizer can be used to clean and transform tabular data.
 
