@@ -40,7 +40,7 @@ The most demonstrable way to get an overview of what can be done with help of Da
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
 
-[Transformations in DataGraft](http://dapaas.github.io/images/documentation/transformations.png)
+![Transformations in DataGraft](http://dapaas.github.io/images/documentation/transformations.jpg)
 
 
 Data transformations are stored with some metadata. The transformation properties include transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section).
@@ -71,7 +71,7 @@ User dashboard helps to manage data pages and data transformations created by us
 
 ##  <a name="publish"></a>Publishing data
 
-![Workflows](http://dapaas.github.io/images/documentation/workflows.png)
+![Workflows](http://dapaas.github.io/images/documentation/workflows.jpg)
 
  
 Publishing data with help of DataGraft platform is a rather simple process. You can create a data page from several different points. You may start by switching to a ![Publish tab](http://dapaas.github.io/images/documentation/publish.png) tab in a main menu. The first thing you do when creating a data page this way is uploading data. To do so, you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
