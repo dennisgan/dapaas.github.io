@@ -6,12 +6,47 @@ weight: 2
 ---
 [Download pdf](http://dapaas.github.io/images/documentation/DataGraft.pdf)
 
+1. [Data transformations](#data_transformations)
+2. [Data pages](#data_pages)
+3. [User registration](#user_registration)
+4. [Dashboard](#dashboard)
+5. [Publishing data](#publish)
+6. [Data cleaning and transfotmation](#transform)
+   * [Transformation metadata](#transform_meta)
+   * [Transformation preview](#transform_preview)
+   * [Constructing transformation pipeline](#transform_pipeline)
+      * [Make Dataset](#make_dataset)      
+      * [Reshape Dataset](#melt)      
+      * [Add Columns](#add_columns)
+      * [Take/Drop Columns](#columns)            
+      * [Derive Colunm](#derive_column)      
+      * [Map Columns](#mapc)      
+      * [Rename Columns](#rename_columns)      
+      * [Split Column](#split)      
+      * [Take/Drop Rows](#rows)      
+      * [Filter Rows](#grep)      
+   * [Defining auxiliary functions](#customfuns)      
+      * [Creating and Editing Custom Utility Functions](#utility)      
+      * [Creating String Transformation Functions through Graphical Interface](#utility_string)
+      * [Creating and Editing Prefixers](#prefixers)
+   * [Building RDF mapping](#rdf)      
 
-## Platform overview
+
 The most demonstrable way to get an overview of what can be done with help of DataGraft platform is to explore data pages and data transformations that other users of this platform chose to share. The two terms mentioned above, **data pages** and **data transformations**, are two main concepts you work with while using DataGraft platform, therefore it may be useful to understand what each of them means in a context of the service. 
 
-### Data pages
-Data pages contain cleaned and transformed data you want to publish. Each data page is stored with some metadata, including data page name; short description; keywords, describing a data page; owner; creation date and public/private property (see [Publishing data](#publish) section). The latter is defined by data page owner and specifies whether this data page can be explored by other users of a platform or not. 
+
+
+
+### <a name="data_transformations"></a>Data transformations
+ Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
+
+[Transformations in DataGraft](http://dapaas.github.io/images/documentation/transformations.png)
+
+
+Data transformations are stored with some metadata. The transformation properties include transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section).
+
+### <a name="data_pages"></a>Data pages
+Another type of asset that users may create and share in DataGraft is **data page**. Data pages contain cleaned and transformed data you want to publish. As well as data transformations, data pages are stored with some metadata, including data page name; short description; keywords, describing a data page; owner; creation date and public/private property (see [Publishing data](#publish) section). The latter is defined by data page owner and specifies whether this data page can be explored by other users of a platform or not. 
 
 <a name="datapagemeta"></a>![Data page properties](http://dapaas.github.io/images/documentation/datapagemeta.png)
 
@@ -22,22 +57,23 @@ Data pages containing RDF also allow you to perform SPARQL querying on data they
 ![Export RDF data](http://dapaas.github.io/images/documentation/sparql.png)
 
 
-### Data transformations
-Another type of asset that users may create and share in DataGraft is **data transformation**. Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called data transformation. The greatest thing about data transformations in DataGraft platform is that you may reuse them repeatedly on other datasets, share them with other users, modify existing transformations and create new transformations by extending ones that you or other users created and shared.
-As well as data pages, data transformations are stored with some metadata. The transformation properties include transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section).
-
 To explore data pages and data transformations created by other users switch to the ![Explore tab](http://dapaas.github.io/images/documentation/explore.png) tab. Here you can see a list of public assets. You may receive basic information about any public data page or data transformation by clicking its name. If in a process of exploring data transformation you find it to be suitable for your needs, you can apply it to your data directly from the explore view. To do so, you just drag and drop your datafile in the white frame labeled "Create data page". If you want to make some changes to the transformation before you use it or just find it interesting and want to explore it in detail, use ![Fork transformation](http://dapaas.github.io/images/documentation/fork.png) button. The transformation thus will be copied to the list of your transformations.  
 
 ![Explore transformation](http://dapaas.github.io/images/documentation/exploretransformation1.png)
 
 
-### User Registration
+
+### <a name="user_registration"></a>User Registration
 In order to use public or create your own data pages and transformations through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) . After you have registered you can change your profile settings by clicking on the user name in top right corner of the website and choosing "My account" menu item.
 
-###	 Dashboard
+###	 <a name="dashboard"></a>Dashboard
 User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of data pages and transformations you have created. From here you can search through your assets, delete them, edit their properties; fork and execute transformations and download data associated with data pages.
 
-##  <a name="publish"></a>Publishing data 
+##  <a name="publish"></a>Publishing data
+
+![Workflows](http://dapaas.github.io/images/documentation/workflows.png)
+
+ 
 Publishing data with help of DataGraft platform is a rather simple process. You can create a data page from several different points. You may start by switching to a ![Publish tab](http://dapaas.github.io/images/documentation/publish.png) tab in a main menu. The first thing you do when creating a data page this way is uploading data. To do so, you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
 ![Upload data](http://dapaas.github.io/images/documentation/upload.png)
 
@@ -63,7 +99,7 @@ At the basis of DataGraft data transformations there lies a Grafter DSL (Domain 
 
 
 
-###  Transformation metadata
+###  <a name="transform_meta"></a>Transformation metadata
 The first tab seen in the transformation creation window is "Metadata". Here user defines transformation title and gives a short description of how this transformation processes targeted data. If you wish to share transformation, it is possible to expose it as public. In this case other platform users will be able to explore and use given transformation.
 
 
@@ -73,7 +109,7 @@ After describing metadata, you may save transformation by clicking “Save” bu
 
 ![Transformation metadata](http://dapaas.github.io/images/documentation/transformationmeta.png)
 
-###  Transformation Preview
+###  <a name="transform_preview"></a>Transformation Preview
 
 After your transformation was saved, in the bottom right corner you may see this icon: ![Apply to dataset](http://dapaas.github.io/images/documentation/open.png). By clicking on it you may immediately apply transformation being created to target data. This may be whether distribution already uploaded to a platform, or alternatively you may upload a new file. For the first option use button depicted as ![Load an existing distribution](http://dapaas.github.io/images/documentation/applytoexisting.png), and for the second -- this one ![Upload file](http://dapaas.github.io/images/documentation/uploadnew.png). In this way you are able to see instant effect of transformation on your data in the preview area. 
 
@@ -81,7 +117,7 @@ Preview area is located in the right part of transformation window. You can see 
 
 ![Transformation preview](http://dapaas.github.io/images/documentation/preview.png)
 
-###  Constructing Transformation Pipeline
+###  <a name="transform_pipeline"></a>Constructing Transformation Pipeline
 
 Data cleaning and transformation in DataGraft platform is performed with help of a “pipeline” concept.  To begin with, each single transformation step is defined as a pipe – a function that performs simple data conversion on its input. The great fact about these functions is that they may be combined together in a such way, that the output of one pipe acts as an input for another. Obviously, the input/output data, that travels through this pipeline is dataset being transformed. This way of composing operations gives a great flexibility and allows to perform rather complex data conversions.
 
@@ -105,12 +141,12 @@ Once you have added a new function to the pipeline, it will instantly appear in 
  The following sections provide you with detailed guidelines for each function usage.
 
   
-####  Make Dataset 
+####  <a name="make_dataset"></a>Make Dataset 
 
 As its name suggests "Make dataset" operation creates new dataset from its input. If you leave all parameter fields blank new dataset will be created from all the input columns with column names given as a simple alphabetic sequence. By checking "move first row to header" option you get all the column names from the first row. The first row will be removed from your dataset.  You may as well specify column names you wish to see in a new dataset or fetch first n columns.
 
 
-####  Reshape Dataset
+####  <a name="melt"></a>Reshape Dataset
 Reshape dataset "melts" given dataset in a such way, that each row of the new dataset represents a unique combination of variables and values for the given column array. The best way to explain this function is through an example. 
 
 ![Example](http://dapaas.github.io/images/documentation/bulb.png)  **_Example:_**
@@ -129,7 +165,7 @@ Reshape dataset "melts" given dataset in a such way, that each row of the new da
 
 
 
-####  Add Columns
+####  <a name="add_columns"></a>Add Columns
 
 The "Add columns"  results in adding a new column(s) to a given dataset. To add a new column you should specify column name and a value for a new column. This value will be copied into every row within the 	dataset. You may as well populate new column with some custom value. This may be current date, dataset filename, row index or custom Clojure code. Note that the "Expression" field is prioritized, in other words, if you define both value and expression, only expression will be used to get a value for a new column.
 You are able to add as many columns as you need with one operation. To add one more column simply click "Add more columns"
@@ -137,13 +173,13 @@ You are able to add as many columns as you need with one operation. To add one m
 ![Add Columns function](http://dapaas.github.io/images/documentation/addcolumnf1.png)
 
 
-####  Take/Drop Columns
+####  <a name="columns"></a>Take/Drop Columns
 
 The "Take/Drop Columns" function narrows given dataset. You may explicitly define columns you wish to see in a dataset by listing their names, get first n columns or remove unnecessary columns from a dataset. In a second case, the dataset will be narrowed to specified number of columns with their names assigned as alphabetical sequence ("A","B","C" etc.). If more than 26 columns are fetched, column names will count "AA", "AB", "AC" ... "BA", "BB", "BC" etc.
 
 ![Take/Drop Columns function](http://dapaas.github.io/images/documentation/columns1.png)
 
-####  Derive Column
+####  <a name="derive_column"></a>Derive Column
 
 This function creates a new column in a dataset by applying some transformation to existing column (or columns). To use this function you should specify a name for a new column, define one or several columns you are going to use to obtain new value and specify a function you apply to them. This function can be chosen from a drop-down list, which contains some standard functions and custom utility functions. For your convenience these functions are grouped together based on the type of operation they perform. 
 
@@ -157,7 +193,7 @@ Some of the functions may expect input parameters in addition to columns, they w
 *One powerful feature of derive-column and similar pipeline functions is possibility to combine functions you apply to columns in the same way you combine functions in pipelines. Essentially, these are pipelines inside your dataset manipulation pipeline. To add one more "internal" function into your pipeline function, click ![Compose](http://dapaas.github.io/images/documentation/compose.png) button. Note, that function order is significant in this case. Functions are composed as they appear from top to down. To remove a function from composition pipeline click trash icon  ![Remove function](http://dapaas.github.io/images/documentation/trash.png) next to the function you wish to delete.*
 
 
-####  Map Columns
+####  <a name="mapc"></a>Map Columns
 
 This method allows you to apply some transformation to column and put the modified value back to the same column. In parameter list you must specify a column you wish to change and a function that will be used to perform this transformation. You may add as many column-function pairs as you need. 
 
@@ -167,7 +203,7 @@ This method allows you to apply some transformation to column and put the modifi
 
 *Whenever you need to treat a column value as a constant literal node, you should first define, which datatype it represents. String-literal will mark  column as one having datatype "string". Other functions used for defining data type are integer-literal and double-literal.*
 
-####  Rename Columns
+####  <a name="rename_columns"></a>Rename Columns
 
 This operation allows you to rename columns in the dataset. To get new names for columns you may either apply function (or function pipeline) to current column names or assign mapping from old to new column names directly.
 
@@ -179,15 +215,15 @@ This operation allows you to rename columns in the dataset. To get new names for
 *You may see the function named "keyword" assigned by default as a function used to transform column names. This is done because the column names in Grafter DSL should be treated as keywords -- special symbolic identifiers used in Clojure language. Having this function as a first one in a list of functions used for column names conversion guarantees column names will be recognized as valid keywords.* 
 
 
-####  Split Column
+####  <a name="split"></a>Split Column
 
 This operation allows to split column on some separator. The column is splitted once, leaving substring obtained as original text before first instance of the separator in the source column and copying text after separator into a new column. The separator itself is extracted from text. Name of the new column is optional.
 
 
-####  Take/Drop Rows
+####  <a name="rows"></a>Take/Drop Rows
 This function allows you to take or drop first n rows in a given dataset. Use switch Take rows/Drop rows at the top of the function parameter list to choose between these two options
 
-####  Filter Rows
+####  <a name="grep"></a>Filter Rows
 This method filters rows in the dataset for matches. This is a rather flexible filtering tool that allows you to filter your data in several different ways.
 
 First field in in "Filter Dataset" parameter list specifies whether filter will be applied to specific column(s) or to all columns in dataset. For latter option just leave this field empty and matching will be performed for each column.
@@ -207,7 +243,9 @@ The priority of listed option is defined as they appear - from top to down: if "
 
 Some complex transformations cannot be done with help of operations described above. In this case you may need to define your own pipeline functions. This can be done with the help of "Custom code" option using Clojure language
 
-####  Creating and Editing Custom Utility Functions
+####  <a name="utility"></a>Creating and Editing Custom Utility Functions
+
+Creating utility functions for transformations is a great way to incapsulate the logic of data modifications, thus making them independent of data they are applied to. For instance, if to convert data in several dataset columns you use the same formula, you can define a function, that performs all the necessary calculations based on its input parameters and call it any time and on any data you need. 
 
 To create your custom function use ![Edit utility functions](http://dapaas.github.io/images/documentation/editutility.png)  button. In the window that opens you can see the list of available functions at the left side and code editor at the right side.
 
@@ -224,14 +262,14 @@ Immediately after you have created a utility function you may start using it as 
 *If you create a function having a dataset as an input parameter, it is possible to make it a part of the transformation pipeline directly. You may add this function to a pipeline by choosing "Custom function" option from a pipeline function list.*
 
 
-####  Creating String Transformation Functions through Graphical Interface
+####  <a name="utility_string"></a>Creating String Transformation Functions through Graphical Interface
 
 However to specify text transformations you may need to perform on your data, you cans define a new function in a more user-friendly way. To do so press ![Create text transformation function](http://dapaas.github.io/images/documentation/createstring.png)  button in the same window, that is used for creating custom utility functions. Now you can see the dialog, where  you specify transformations you want to perform on text values. All modifications you define are instantly  demonstrated with help of sample text in the right bottom corner.
 
 ![Create text transformation function](http://dapaas.github.io/images/documentation/createstringwin.png)
 
 
-####  Creating and Editing Prefixers
+####  <a name="prefixers"></a>Creating and Editing Prefixers
 One special type of utility functions you may define is **prefixer** -- function that adds some prefix to its argument in a such way, that the result represents an URI. This is something you may need in constructing RDF mapping part. If all you need is just constructing URI nodes by adding the same type of prefix to all values in a column, you should define prefixers in "Edit RDF mapping prefixes" dialog (see [Building RDF Mapping](#rdf) section). However, if you need to add some logic in assigning prefixes depending on column values, you should define prefixer functions here in pipeline view. 
 You may create and edit prefixers in the "Edit prefixers" window. To see this window  press ![Edit prefixers](http://dapaas.github.io/images/documentation/editprefixers.png) button in the pipeline view. Here you can see the list of all prefixers you created for current transformation. You may add a new prefixer by specifying its name and URI and pressing ![Add prefixer](http://dapaas.github.io/images/documentation/addprefixer.png)  button. Created prefixer will instantly appear in the list of prefixers above. It is possible as well to create prefixer by adding some string to the existing one. In this case select a prefixer you wish to use as a base one, enter new prefixer name and string value and press ![Add prefixer from base](http://dapaas.github.io/images/documentation/addprefixerfrom.png). Now, if the base prefixer is changed, changes will be as well applied to the child prefixers. To remove prefixers select all prefixers you wish to remove and press ![Remove prefixer](http://dapaas.github.io/images/documentation/removeprefixers.png).
 
