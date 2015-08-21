@@ -8,6 +8,7 @@ weight: 2
 
 1. [Data transformations](#data_transformations)
 2. [Data pages](#data_pages)
+3. [Exploring public transformations](#explore)
 3. [User registration](#user_registration)
 4. [Dashboard](#dashboard)
 5. [The workflow overview](#workflow) 
@@ -31,7 +32,7 @@ weight: 2
       * [Creating String Transformation Functions through Graphical Interface](#utility_string)
       * [Creating and Editing Prefixers](#prefixers)
    * [Building RDF mapping](#rdf)      
-
+   * [Executing transformation](#apply)      
 
 The most demonstrable way to get an overview of what can be done with help of DataGraft platform is to explore data pages and data transformations that other users of this platform chose to share. The two terms mentioned above, **data pages** and **data transformations**, are two main concepts you work with while using DataGraft platform, therefore it may be useful to understand what each of them means in a context of the service. 
 
@@ -57,6 +58,7 @@ Data pages containing RDF also allow you to perform SPARQL querying on data they
 
 ![Export RDF data](http://dapaas.github.io/images/documentation/sparql.png)
 
+### <a name="explore"></a>Exploring public transformations
 
 To explore data pages and data transformations created by other users switch to the ![Explore tab](http://dapaas.github.io/images/documentation/explore.png) tab. Here you can see a list of public assets. You may receive basic information about any public data page or data transformation by clicking its name. If in a process of exploring data transformation you find it to be suitable for your needs, you can apply it to your data directly from the explore view. To do so, you just drag and drop your datafile in the white frame labeled "Create data page". If you want to make some changes to the transformation before you use it or just find it interesting and want to explore it in detail, use ![Fork transformation](http://dapaas.github.io/images/documentation/fork.png) button. The transformation thus will be copied to the list of your transformations.  
 
@@ -303,9 +305,13 @@ The first step here  would be to specify the base graph URI. To create and edit 
 
 Now you can start to create, edit and remove RDF nodes and their properties. The three groups of nodes that can be created here are URI nodes, literal nodes and blank nodes. To construct a URI node both as one obtained from dataset column and as some constant URI, you need to define some prefix. Prefixes are separated from values they complement with semicolon. Note, that dataset columns may be converted to the URI form during the tabular transformation step. In this case you don't have to specify prefixers to make them URI nodes in RDF schema. If you, however try to create a URI node from data column that is not recognized as a valid URI, and do not assign any prefix value to  this column, it would be automatically converted to column literal node. Literal nodes are represented just by their value in the resulted RDF file.
 
-![Apply transformation](http://dapaas.github.io/images/documentation/applytransformation.png)
+###  <a name="rdf"></a>Executing transformation 
+
+
 
 After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](http://dapaas.github.io/images/documentation/gear.png) icon. After you did this you can see a dialog, where you can choose between publishing transformed data as a data page and downloading results locally on your computer.
 
  
+![Apply transformation](http://dapaas.github.io/images/documentation/applytransformation.png)
 
+Alternatively transformations can be executed from the "Dashboard" and "Explore" views as it have been discussed in sections [Dashboard](#dashboard) and [Exploring public transformations](#explore)
