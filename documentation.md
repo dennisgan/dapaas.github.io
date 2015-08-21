@@ -40,7 +40,7 @@ The most demonstrable way to get an overview of what can be done with help of Da
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
 
-![Transformations in DataGraft](http://dapaas.github.io/images/documentation/transformations.jpg)
+![Transformations in DataGraft](http://dapaas.github.io/images/documentation/transf.jpg)
 
 
 Data transformations are stored with some metadata. The transformation properties include transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section).
