@@ -294,16 +294,12 @@ You may create and edit prefixers in the "Edit prefixers" window. To see this wi
 
 ###  <a name="rdf"></a>Building RDF Mapping 
 
+One great method to publish your data on the Web is to use Linked Data for it. You can read about all the opportunities you get with linked data here: [http://www.w3.org/standards/semanticweb/data](http://www.w3.org/standards/semanticweb/data). If you've chosen to convert your data in a format of linked data, the first thing you need to do is to build an RDF map, that will determine way of getting linked data nodes from tabular data.
 When tabular data is converted to a desirable format, you can start creating RDF mappings. In the process of creating RDF sceleton you can immediately see a clear visualization of nodes and corresponding relations.
 
 To start creating RDF mapping of your dataset use switch "Map tabular data to RDF". 
-The first step here  would be to specify base the graph URI. To create and edit prefixes you are going to need for the RDF generation use Edit RDF prefixes button. By pressing it you open a dialog, where you can as well see RDF vocabularies available by default.
+The first step here  would be to specify the base graph URI. To create and edit prefixes you are going to need for the RDF generation use "Edit RDF prefixes button". By pressing it you open a dialog, where you can as well see RDF vocabularies available by default.
+
+Now you can start to create, edit and remove RDF nodes and their properties
 
 
-
-
-## <a name="video"></a>Grafterizer workflow demonstration
-
-The following video demonstrates how Grafterizer can be used to clean and transform tabular data.
-
-<iframe width="680" height="382" src="https://www.youtube.com/embed/PMim5BNqUag" frameborder="0" allowfullscreen></iframe>
