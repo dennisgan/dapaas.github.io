@@ -295,11 +295,17 @@ You may create and edit prefixers in the "Edit prefixers" window. To see this wi
 ###  <a name="rdf"></a>Building RDF Mapping 
 
 One great method to publish your data on the Web is to use Linked Data for it. You can read about all the opportunities you get with linked data here: [http://www.w3.org/standards/semanticweb/data](http://www.w3.org/standards/semanticweb/data). If you've chosen to convert your data in a format of linked data, the first thing you need to do is to build an RDF map, that will determine way of getting linked data nodes from tabular data.
+
 When tabular data is converted to a desirable format, you can start creating RDF mappings. In the process of creating RDF sceleton you can immediately see a clear visualization of nodes and corresponding relations.
 
 To start creating RDF mapping of your dataset use switch "Map tabular data to RDF". 
 The first step here  would be to specify the base graph URI. To create and edit prefixes you are going to need for the RDF generation use "Edit RDF prefixes button". By pressing it you open a dialog, where you can as well see RDF vocabularies available by default.
 
-Now you can start to create, edit and remove RDF nodes and their properties
+Now you can start to create, edit and remove RDF nodes and their properties. The three groups of nodes that can be created here are URI nodes, literal nodes and blank nodes. To construct a URI node both as one obtained from dataset column and as some constant URI, you need to define some prefix. Prefixes are separated from values they complement with semicolon. Note, that dataset columns may be converted to the URI form during the tabular transformation step. In this case you don't have to specify prefixers to make them URI nodes in RDF schema. If you, however try to create a URI node from data column that is not recognized as a valid URI, and do not assign any prefix value to  this column, it would be automatically converted to column literal node. Literal nodes are represented just by their value in the resulted RDF file.
 
+![Apply transformation](http://dapaas.github.io/images/documentation/applytransformation.png)
+
+After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](http://dapaas.github.io/images/documentation/gear.png) icon. After you did this you can see a dialog, where you can choose between publishing transformed data as a data page and downloading results locally on your computer.
+
+ 
 
