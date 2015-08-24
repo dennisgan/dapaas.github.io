@@ -101,7 +101,7 @@ Photo by <a href="https://www.flickr.com/photos/jorneriksson/" target="_blank">J
 
 <div class="mdl-cell mdl-cell--6-col mdl-cell--bottom" markdown="1">
 
-DataGraft is a product of [DaPaaS](//dapaas.eu), project co-founded by the EC under 7th Framework Programme (FP7 2007-2013)
+DataGraft is a product of [DaPaaS](http://dapaas.eu), project co-founded by the EC under 7th Framework Programme (FP7 2007-2013)
 
 </div>
 </div>
