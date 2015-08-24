@@ -90,11 +90,27 @@ Programmatically access the data catalogue
     </a>
 </div>
 
+<div class="photo-credits">
+Photo by <a href="https://www.flickr.com/photos/jorneriksson/" target="_blank">Jørn Eriksson</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>)
 </div>
 
-<div class="last-screen mdl-grid">
+</div>
 
-<div class="mdl-layout__header-row">
+<div class="last-screen">
+
+<div class="mdl-grid">
+<div class="footer-navigation mdl-grid mdl-cell--6-col">
+<nav class="mdl-navigation">
+    <a class="mdl-navigation__link" href="//datagraft.net/pages/catalogs/">Explore</a>
+    {% assign pages = site.pages | where: "hidenInHeader",nil | sort:"weight"  %}
+    {% for page in pages %}
+    {% if page.title %}
+    <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl}}">{{ page.title}}</a>
+    {% endif %}
+    {% endfor %}
+</nav>
+</div>
+<div class="footer-navigation mdl-grid mdl-cell--6-col">
     <div class="mdl-layout-spacer"></div>
     <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="/terms-of-use/">Terms of use</a>
@@ -103,12 +119,12 @@ Programmatically access the data catalogue
         <a class="mdl-navigation__link" href="/contact/">Contact</a>
     </nav>
 </div>
+</div>
 
 <div class="legal-footer" markdown="1">
 
 DataGraft is a product of [DaPaaS](http://dapaas.eu), project co-founded by the EC under 7th Framework Programme (FP7 2007-2013)
 
-Photo by <a href="https://www.flickr.com/photos/jorneriksson/" target="_blank">Jørn Eriksson</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>)
 
 </div>
 

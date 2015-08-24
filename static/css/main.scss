@@ -23,6 +23,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 $dapaas-color: #5264AE;
 $dapaas-color-accent: #FF609A;
+$white-not-so-white: hsl(226, 39%, 94%);
 
 // Width of the content area
 $content-width:    800px;
@@ -65,12 +66,12 @@ color:rgb(104, 206, 156);
 .dapaas-header.mdl-layout__header {
     background-color: $dapaas-color;
     a:visited {
-        color:white;
+        color:$white-not-so-white;
     }
 }
 
 a.mdl-layout-title {
-    color:white;
+    color:$white-not-so-white;
 }
 
 .mdl-layout__drawer a.mdl-layout-title {
@@ -133,10 +134,16 @@ iframe.dapaas-iframe {
         $dapaas-color 95.09%) repeat scroll 0% 0%;
     min-height:30em;
     min-height:87vh;
-    color:white;
+    color:$white-not-so-white;
 
     p {
-        font-size:18px;
+        font-size:19px;
+    }
+
+    h2 {
+        font-size:57px;
+        margin-bottom:32px;
+        line-height: 57px;
     }
 
     #screenshots-container {
@@ -157,7 +164,7 @@ iframe.dapaas-iframe {
 
         img {
             border-radius:3px;
-            background: white;
+            background: $white-not-so-white;
             box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.048);
             max-width:90%;
             max-height:100%;
@@ -198,6 +205,18 @@ iframe.dapaas-iframe {
     background:#F2F2F2 url(../images/bg.jpeg) no-repeat;
     background-position: cover;
     background-position: center center;
+    position:relative;
+
+    .photo-credits {
+        position: absolute;
+        left: 13px;
+        bottom: 12px;
+        color: rgb(202, 157, 191);
+        font-size: small;
+        &:hover, a:hover {
+            color:$white-not-so-white;
+        }
+    }
 }
 
 .max-width-container {
@@ -262,7 +281,7 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
     text-decoration: initial;
 
     a.mdl-button--raised.mdl-button--colored {
-        background:white;
+        background:$white-not-so-white;
         color:#333;
         padding: 10px 24px;
     }
@@ -279,15 +298,25 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
     // background:#B8BAC3;
     // background:#170E21;
     background:$dapaas-color;
-    color:white;
-    min-height:200px;
+    color:$white-not-so-white;
+    min-height:210px;
+    position:relative;
+
     &, & p {
         font-size:0.85em;
     }
     p {
         margin-bottom:0;
     }
-    div:not(.mdl-layout__header-row) a {
+    
+    a.mdl-navigation__link {
+        color:$white-not-so-white;
+
+        &:visited, &:hover {
+            color:$white-not-so-white;
+        }
+    }
+    a:not(.mdl-navigation__link) {
         color: $dapaas-color-accent;
         &:hover, &:visited {
             color: darken($dapaas-color-accent, 10%);
@@ -356,6 +385,18 @@ $whiteSpace: 50px;
 }
 
 .legal-footer {
-    align-self: flex-end;
-    padding: 10px 23px;
+    position: absolute;
+    left: 23px;
+    right: 23px;
+    bottom: 13px;
+    line-height: 18px;
+    p {
+        line-height: 15px;
+    }
+}
+
+.footer-navigation {
+    .mdl-navigation__link {
+        padding: 12px;
+    }
 }
