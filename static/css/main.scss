@@ -213,10 +213,15 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
     font-family: $base-font-family;
 }
 
-.mdl-layout__content:not(.layout__mainpage) p {
-    font-family: $base-font-family-p;
-}
+.mdl-layout__content:not(.layout__mainpage) {
+    p, table {
+        font-family: $base-font-family-p;
+    }
 
+    table {
+        font-size:small;
+    }
+}
 .sign-up, .sign-in {
     border-radius: 50px;
     border: 2px solid transparent;
