@@ -315,7 +315,8 @@ $whiteSpace: 50px;
 }
 
 .datagraft-main-title {
-    background: transparent url(../images/logo.png) no-repeat left center;
+    background: transparent url(../images/logo.svg) no-repeat left center;
+    background-size: 52px auto;
 
     &.mdl-navigation__link {
         padding-left: 65px;
