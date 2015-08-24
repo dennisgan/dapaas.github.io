@@ -45,11 +45,11 @@ The current version of DataGraft handles tabular data (CSV) and RDF data (i.e. y
 
 #### Is there any documentation for DataGraft?
 
-Yes, draft documentation is available [here] (http://dapaas.github.io/documentation/). Documentation will be further improved in the upcoming period.
+Yes, draft documentation is available [here](/documentation/). Documentation will be further improved in the upcoming period.
 
 #### I am a developer and interested to transform and host my data with DataGraft. Do I have API access to DataGraft capabilities?
 
-Yes, most DataGraft capabilities are accessible at the API level. These include programmatic access to datasets and data transformation catalogues (adding, removing datasets and transformations), querying data, and executing data transformations. See the [API documentation](http://dapaas.github.io/documentation/) for further details.
+Yes, most DataGraft capabilities are accessible at the API level. These include programmatic access to datasets and data transformation catalogues (adding, removing datasets and transformations), querying data, and executing data transformations. See the [API documentation](/documentation/) for further details.
 
 #### Who developed DataGraft?
 
