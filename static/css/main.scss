@@ -15,13 +15,14 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: white;
-$brand-color:      #2a7ae2;
+$brand-color:      rgb(124,77,255);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $dapaas-color: #5264AE;
+$dapaas-color-accent: #FF609A;
 
 // Width of the content area
 $content-width:    800px;
@@ -52,14 +53,14 @@ $on-laptop:        800px;
         "syntax-highlighting"
 ;
 
-a,
+/*a,
 .mdl-mega-footer--link-list a,
 .mdl-mega-footer__link-list a {
 color:rgb(105,240,174);
 }
 a:visited {
 color:rgb(104, 206, 156);
-}
+}*/
 
 .dapaas-header.mdl-layout__header {
     background-color: $dapaas-color;
@@ -220,6 +221,7 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
     border-radius: 50px;
     border: 2px solid transparent;
     margin-bottom: 10px;
+    color: pink;
     &:hover {
         text-decoration: initial;
         color:rgb(103,58,183);
@@ -232,6 +234,9 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
     &:hover {
         background:#cfcfcf;
     }
+    &:visited {
+        color: $dapaas-color-accent;
+    }
 }
 
 .sign-in {
@@ -239,6 +244,12 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
     color:white;
     padding-left:10px;
     padding-right:10px;
+    &:visited {
+        color: white;
+    }
+    &:hover {
+        color: $dapaas-color-accent;
+    }
 }
 
 .start-using-now {
@@ -259,13 +270,22 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
 }
 
 .last-screen {
-    background:#B8BAC3;
+    // background:#B8BAC3;
+    // background:#170E21;
+    background:$dapaas-color;
+    color:white;
     min-height:200px;
     &, & p {
         font-size:0.85em;
     }
     p {
         margin-bottom:0;
+    }
+    a {
+        color: $dapaas-color-accent;
+        &:hover, &:visited {
+            color: darken($dapaas-color-accent, 10%);
+        }
     }
 }
 
@@ -308,4 +328,14 @@ $whiteSpace: 50px;
     .mdl-layout__header-row {
         padding-left: 23px;
     }
+}
+
+.sign-in-icon {
+    position: relative;
+    top: 7px;
+    right: 6px;
+}
+
+.mdl-layout__header-row .mdl-navigation__link {
+    padding:0 15px;
 }

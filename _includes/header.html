@@ -10,11 +10,13 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation -->
         <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="//datagraft.net/pages/catalogs/">Explore</a>
             {% for page in pages %}
             {% if page.title %}
             <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl}}">{{ page.title}}</a>
             {% endif %}
             {% endfor %}
+            <a class="mdl-navigation__link" href="//datagraft.net/pages/signin.jsp"><i class="material-icons sign-in-icon">account_circle</i>Sign In</a>
         </nav>
     </div>
 </header>
@@ -23,6 +25,8 @@
     {{ site.title }}
     </a>
     <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="//datagraft.net/pages/signin.jsp">Sign In</a>
+      <a class="mdl-navigation__link" href="//datagraft.net/pages/catalogs/">Explore</a>
       {% for page in pages %}
       {% if page.title %}
       <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl}}">{{ page.title}}</a>
