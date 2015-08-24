@@ -263,7 +263,8 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
     }
 
     a.mdl-button--raised.mdl-button--colored:hover {
-        background:rgb(103,58,183);
+        // background:rgb(103,58,183);
+        background:$dapaas-color-accent;
         color:white;
         text-decoration: initial;
     }
@@ -281,7 +282,7 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
     p {
         margin-bottom:0;
     }
-    a {
+    div:not(.mdl-layout__header-row) a {
         color: $dapaas-color-accent;
         &:hover, &:visited {
             color: darken($dapaas-color-accent, 10%);
@@ -340,3 +341,7 @@ $whiteSpace: 50px;
     right: 6px;
 }
 
+.legal-footer {
+    align-self: flex-end;
+    padding: 10px 23px;
+}
