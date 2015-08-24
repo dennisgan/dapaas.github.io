@@ -118,8 +118,7 @@ a.mdl-layout-title {
 
 iframe.dapaas-iframe {
     flex-grow:1;
-    height:auto;
-    height:100%;
+    height:inherit;
 }
 
 .dapaas-iframe-layout {
