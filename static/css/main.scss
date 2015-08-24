@@ -300,3 +300,12 @@ $whiteSpace: 50px;
 /*.mdl-layout__header-row {
     padding-left: 56px;
 }*/
+
+@media only screen and (min-width:601px){
+    .mdl-layout__drawer-button {
+        display: none;
+    }
+    .mdl-layout__header-row {
+        padding-left: 23px;
+    }
+}
