@@ -309,6 +309,10 @@ $whiteSpace: 50px;
     padding-right:$whiteSpace;
 }
 
+.mdl-layout__header-row .mdl-navigation__link {
+    padding:0 15px;
+}
+
 .datagraft-main-title {
     background: transparent url(../images/logo.png) no-repeat left center;
 
@@ -336,6 +340,3 @@ $whiteSpace: 50px;
     right: 6px;
 }
 
-.mdl-layout__header-row .mdl-navigation__link {
-    padding:0 15px;
-}
