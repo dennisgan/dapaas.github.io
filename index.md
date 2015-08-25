@@ -73,8 +73,6 @@ Share data privately or publicly
 
 Query data through your own SPARQL endpoint
 
-Visualise your data with our SPARQL based chart builder
-
 Programmatically access the data catalogue
 
 </div>
@@ -101,7 +99,6 @@ Photo by <a href="https://www.flickr.com/photos/jorneriksson/" target="_blank">J
 <div class="mdl-grid">
 <div class="footer-navigation mdl-grid mdl-cell--6-col">
 <nav class="mdl-navigation">
-    <a class="mdl-navigation__link" href="//datagraft.net/pages/catalogs/">Explore</a>
     {% assign pages = site.pages | where: "hidenInHeader",nil | sort:"weight"  %}
     {% for page in pages %}
     {% if page.title %}
