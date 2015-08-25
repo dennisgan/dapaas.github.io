@@ -385,11 +385,10 @@ $whiteSpace: 50px;
 }
 
 .legal-footer {
-    position: absolute;
-    left: 23px;
-    right: 23px;
-    bottom: 13px;
     line-height: 18px;
+margin-left: 23px;
+padding-bottom: 13px;
+padding-right: 23px;
     p {
         line-height: 15px;
     }
