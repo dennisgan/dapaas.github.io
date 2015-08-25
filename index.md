@@ -9,7 +9,7 @@ hidenInHeader: true
 <div class="max-width-container mdl-grid">
 <div class="mdl-cell mdl-cell--6-col mdl-cell--middle mdl-cell--12-col-tablet mdl-cell--12-col-phone" markdown="1">
 
-## One stop shop for hosted data management
+## One-stop-shop for hosted data management
 
 Powerful data transformation and reliable data access capabilities
 
