@@ -10,7 +10,6 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation -->
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="//datagraft.net/pages/catalogs/">Explore</a>
             {% for page in pages %}
             {% if page.title %}
             <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl}}">{{ page.title}}</a>
