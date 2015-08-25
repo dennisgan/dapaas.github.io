@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact us
-permalink: /Contact/
+permalink: /contact/
 hidenInHeader: true
 ---
 
