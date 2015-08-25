@@ -120,7 +120,7 @@ Photo by <a href="https://www.flickr.com/photos/jorneriksson/" target="_blank">J
 
 <div class="legal-footer" markdown="1">
 
-DataGraft is a product of [DaPaaS](http://dapaas.eu), project co-founded by the EC under 7th Framework Programme (FP7 2007-2013)
+DataGraft is a service operated by the [DaPaaS](http://dapaas.eu) project, co-founded by the EC under 7th Framework Programme (FP7 2007-2013)
 
 
 </div>
