@@ -1,0 +1,31 @@
+{% assign pages = site.pages | where: "hidenInHeader",nil | sort:"weight"  %}
+<header class="dapaas-header mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__header-row">
+        <!-- <nav class="mdl-navigation"> -->
+        <a class="mdl-navigation__link mdl-layout-title datagraft-main-title" href="{{ site.baseurl }}/">
+          {{ site.title }}
+        </a>
+        <!-- </nav> -->
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="http://project.dapaas.eu/dapaas-news">News</a>
+            <a class="mdl-navigation__link dapaas-signin" href="//datagraft.net/pages/signin.jsp"><i class="material-icons sign-in-icon">account_circle</i>Sign In</a>
+        </nav>
+    </div>
+</header>
+ <div class="mdl-layout__drawer">
+    <a class="mdl-layout-title" href="{{ site.baseurl }}/">
+    {{ site.title }}
+    </a>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link dapaas-signin" href="//datagraft.net/pages/signin.jsp"><i class="material-icons sign-in-icon">account_circle</i>Sign In</a>
+      <a class="mdl-navigation__link" href="//datagraft.net/pages/catalogs/">Explore</a>
+      {% for page in pages %}
+      {% if page.title %}
+      <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl}}">{{ page.title}}</a>
+      {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
