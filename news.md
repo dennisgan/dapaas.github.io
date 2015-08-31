@@ -4,7 +4,7 @@ title: News
 permalink: /news/
 weight: -12
 ---
-<div class="mdl-grid">
+<div class="mdl-grid newspost-grid">
 
 {% assign post = site.posts.first %}
 <div class="section-highlight section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
