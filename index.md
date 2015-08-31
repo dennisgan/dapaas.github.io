@@ -67,7 +67,7 @@ Programmatically access transformations and the transformation catalogue
 
 ### Reliable data hosting and querying services
 
-Host data on our scalable, cloud-based triplestore
+Host data on our reliable, cloud-based triplestore
 
 Share data privately or publicly
 
