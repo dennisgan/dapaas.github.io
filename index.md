@@ -94,35 +94,4 @@ Photo by <a href="https://www.flickr.com/photos/jorneriksson/" target="_blank">J
 
 </div>
 
-<div class="last-screen">
-
-<div class="mdl-grid">
-<div class="footer-navigation mdl-grid mdl-cell--6-col">
-<nav class="mdl-navigation">
-    {% assign pages = site.pages | where: "hidenInHeader",nil | sort:"weight"  %}
-    {% for page in pages %}
-    {% if page.title %}
-    <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl}}">{{ page.title}}</a>
-    {% endif %}
-    {% endfor %}
-</nav>
-</div>
-<div class="footer-navigation mdl-grid mdl-cell--6-col">
-    <div class="mdl-layout-spacer"></div>
-    <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="/terms-of-use/">Terms of use</a>
-        <a class="mdl-navigation__link" href="/privacy-policy/">Privacy policy</a>
-        <a class="mdl-navigation__link" href="/cookie-policy/">Cookie policy</a>
-        <a class="mdl-navigation__link" href="/contact/">Contact</a>
-    </nav>
-</div>
-</div>
-
-<div class="legal-footer" markdown="1">
-
-DataGraft is a service operated by the [DaPaaS](http://dapaas.eu) project, co-funded by the EC under 7th Framework Programme (FP7 2007-2013)
-
-
-</div>
-
-</div>
+{% include footer.html %}

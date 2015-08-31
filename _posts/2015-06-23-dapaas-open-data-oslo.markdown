@@ -3,6 +3,7 @@ layout: post
 title:  "DaPaaS Open Data Oslo"
 date:   2015-06-23
 author: Emeafa Doe
+image: http://bd7a65e2cb448908f934-86a50c88e47af9e1fb58ce0672b5a500.r32.cf3.rackcdn.com/uploads/assets/8a/77/558a773cd0d4627d91000027/meet.jpg 
 ---
 
 ![null][1]

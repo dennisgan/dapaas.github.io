@@ -1,12 +1,27 @@
-<footer class="mdl-mega-footer">
+<footer class="last-screen">
 
-  <div class="mdl-mega-footer--bottom-section">
-    <div class="mdl-logo">{{ site.title }}</div>
-    <ul class="mdl-mega-footer--link-list">
-      <li><a href="/about/">About</a></li>
-      <li><a href="/terms-of-use/">Terms of Use</a></li>
-      <li><a href="/privacy-policy/">Privacy Policy</a></li>
-    </ul>
-  </div>
+<div class="mdl-grid">
+<div class="footer-navigation mdl-grid mdl-cell--6-col">
+<nav class="mdl-navigation">
+    {% assign pages = site.pages | where: "hidenInHeader",nil | sort:"weight"  %}
+    {% for page in pages %}
+    {% if page.title %}
+    <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl}}">{{ page.title}}</a>
+    {% endif %}
+    {% endfor %}
+</nav>
+</div>
+<div class="footer-navigation mdl-grid mdl-cell--6-col">
+    <div class="mdl-layout-spacer"></div>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/terms-of-use/">Terms of use</a>
+        <a class="mdl-navigation__link" href="/privacy-policy/">Privacy policy</a>
+        <a class="mdl-navigation__link" href="/cookie-policy/">Cookie policy</a>
+        <a class="mdl-navigation__link" id="discussion-icon" href="/feedback/"><i class="material-icons">chat_bubble</i> Feedback</a>
+    </nav>
+</div>
+</div>
+
+<p class="legal-footer">DataGraft is a service operated by the <a href="http://dapaas.eu">DaPaaS</a> project, co-funded by the EC under 7th Framework Programme (FP7 2007-2013)</p>
 
 </footer>

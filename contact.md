@@ -28,4 +28,3 @@ Our community engagement manager is <em>Amanda Smith</em>. You can email her: <s
 
 To keep up to date with the project and the platform, please follow [@dapaasproject](http://twitter.com/dapaasproject). You can also tinker with our [Github repository](https://github.com/dapaas).
 
-{% include disqus.html %}
