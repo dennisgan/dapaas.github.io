@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title, .mdl-button {
 }
 
 .mdl-layout__content:not(.layout__mainpage) {
-    p, table {
+    p, table, li {
         font-family: $base-font-family-p;
     }
 
