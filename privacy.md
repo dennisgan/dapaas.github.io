@@ -16,9 +16,11 @@ We monitor your usage or DataGraft.net to improve the service. The collected dat
 ## We do not capitalize on your content
 
 We do not sell or rent any or your content. We will share your personally identifiable information (PII), your username and your password, in cases such as the following:
+
  - With companies that are contractually engaged in providing us with services, such as data storage and hosting. These companies are obligated by contract to safeguard any PII they receive from us.
  - Information collected from our users could be disclosed or transferred to a third-party as a result of a transaction such as a merger or take-over. We will notify you if a different entity will receive your PII.
  - We will disclose any information when required by law. See the Terms of Use for more information.
+
 By explicitly publishing public content on DataGraft.net, you are allowing us to share your content publicly. You and only you can choose whether your content is public or private.
 
 ## Content safety
