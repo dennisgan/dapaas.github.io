@@ -17,10 +17,9 @@ DataGraft is aimed at data workers and data developers interested in simplified 
 
 DataGraft was developed to provide better and easier to use tools for data workers and developers who consider existing approaches to data management and access too costly and technically complex.
 
-
 #### Why is DataGraft special?
 
-DataGraft offers an integrated, flexible, and reliable cloud-based solution for data transformation and data access. Key features include flexible management of data transformations (e.g. creation, execution, sharing, reuse) and reliable data services. DataGraft offers GUI and API access to data transformations and data services. 
+DataGraft offers an integrated, flexible, and reliable cloud-based solution for data transformation and data access. Key features include flexible management of data transformations (e.g. interactive creation, execution, sharing, reuse) and reliable data services. DataGraft offers GUI and API access to data transformations and data services. 
 
 #### Are all my data and/or transformations on DataGraft public?
 
@@ -46,6 +45,8 @@ The current version of DataGraft handles tabular data (CSV) and RDF data (i.e. y
 #### Is there any documentation for DataGraft?
 
 Yes, draft documentation is available [here](/documentation/). Documentation will be further improved in the upcoming period.
+
+For background materials on technical aspects related to DataGraft you can check out the [DaPaaS technical reports] (http://project.dapaas.eu/dapaas-reports). A useful presentation can be found [here](http://www.slideshare.net/ruleml2012/industryruleml2015-datagraft).
 
 #### I am a developer and interested to transform and host my data with DataGraft. Do I have API access to DataGraft capabilities?
 
