@@ -172,27 +172,27 @@ iframe.dapaas-iframe {
             transform: scale(0.9,0.9) perspective(275px) rotateY(-3deg);
         }
 
-        left: 100px;
+        left: 20%;
         &:first-child {
-            left:240px;
+            left:50%;
             img {
-                transform: scale(0.7,0.7) perspective(300px) rotateY(-2deg);
+                transform: scale(0.66,0.66) perspective(300px) rotateY(-2deg);
             }
         }
         &:nth-child(2) {
-            left:220px;
+            left:43%;
             img {
-                transform: scale(0.75,0.75) perspective(300px) rotateY(-2deg);
+                transform: scale(0.73,0.73) perspective(300px) rotateY(-2deg);
             }
         }
         &:nth-child(3) {
-            left:200px;
+            left:35%;
             img {
                 transform: scale(0.8,0.8) perspective(300px) rotateY(-2deg);
             }
         }
         &:last-child {
-            left:-30px;
+            left:-10px;
 
             img {
                 transform: scale(1,1) perspective(250px) rotateY(-4deg);
