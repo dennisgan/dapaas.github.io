@@ -70,7 +70,7 @@ For now, yes. With the following limitations per account:
 
 * Data upload: You can upload CSV files of up to 10MB each, and RDF files of up to 100MB each;
 * Datapages: You can have up to 10 RDF datapages;
-* Persistent storage: up to 2 GB of CSV data, and 1M triples for RDF data.
+* Persistent storage: You can host up to 2 GB of CSV data, and 1M triples for RDF data.
 
 If you find DataGraft useful and you are interested to use it beyond its current limitations please [get in touch with us](https://datagraft.net/contact/). As the development will progress these limitations may be relaxed for all accounts.
 
