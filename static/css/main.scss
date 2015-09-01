@@ -148,7 +148,7 @@ iframe.dapaas-iframe {
 
     #screenshots-container {
         position:relative;
-        height:335px;
+        height:353px;
         //left:50px;
         cursor:pointer;
         -webkit-user-select:none;
@@ -176,10 +176,16 @@ iframe.dapaas-iframe {
         &:first-child {
             left:240px;
             img {
-                transform: scale(0.75,0.75) perspective(300px) rotateY(-2deg);
+                transform: scale(0.7,0.7) perspective(300px) rotateY(-2deg);
             }
         }
         &:nth-child(2) {
+            left:220px;
+            img {
+                transform: scale(0.75,0.75) perspective(300px) rotateY(-2deg);
+            }
+        }
+        &:nth-child(3) {
             left:200px;
             img {
                 transform: scale(0.8,0.8) perspective(300px) rotateY(-2deg);
