@@ -25,9 +25,10 @@ Powerful data transformation and reliable data access capabilities
 <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
 <div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet mdl-cell--middle mdl-cell--hide-phone" id="screenshots-container">
 
-<div class="screenshot"><img alt="" src="/static/images/datagraft.png"></div>
-<div class="screenshot"><img alt="" src="/static/images/grafterizer.png"></div>
-<div class="screenshot"><img alt="" src="/static/images/home.jpg"></div>
+<div class="screenshot"><img alt="" src="/static/images/screenshots/datapage.png"></div>
+<div class="screenshot"><img alt="" src="/static/images/screenshots/query.png"></div>
+<div class="screenshot"><img alt="" src="/static/images/screenshots/grafterizer.png"></div>
+<div class="screenshot"><img alt="" src="/static/images/screenshots/explore.png"></div>
 </div>
 </div>
 </div>
