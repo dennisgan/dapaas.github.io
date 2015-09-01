@@ -20,7 +20,7 @@ DataGraft was developed to provide better and easier to use tools for data worke
 
 #### Why is DataGraft special?
 
-DataGraft offers an integrated, flexible, and scalable cloud-based solution for data transformation and data access. Key features include flexible management of data transformations (e.g. creation, execution, sharing, reuse) and scalable data services. DataGraft offers GUI and API access to data transformations and data services. 
+DataGraft offers an integrated, flexible, and reliable cloud-based solution for data transformation and data access. Key features include flexible management of data transformations (e.g. creation, execution, sharing, reuse) and reliable data services. DataGraft offers GUI and API access to data transformations and data services. 
 
 #### Are all my data and/or transformations on DataGraft public?
 
@@ -53,19 +53,29 @@ Yes, most DataGraft capabilities are accessible at the API level. These include 
 
 #### Who developed DataGraft?
 
-DataGraft has been developed by [a consortium of 6 companies](http://project.dapaas.eu/dapaas-partners) as part of [the DaPaaS project](http://project.dapaas.eu/).
+DataGraft has been primarily developed by [a consortium of 6 companies](http://project.dapaas.eu/dapaas-partners) as part of [the DaPaaS project](http://project.dapaas.eu/), but others have also contributed (see next question).
 
 #### Who funded DataGraft?
 
-DataGraft has been primarily funded by the European Commission (EC) through [the DaPaaS project](http://project.dapaas.eu/) under the Grant Agreement 610988. Other EC-funded projects such as [SmartOpenData](http://www.smartopendata.eu/) and [OpenCube](http://opencube-project.eu/) contributed to the development of some components.
+DataGraft has been primarily funded by the European Commission (EC) through [the DaPaaS project](http://project.dapaas.eu/) under the Grant Agreement 610988. Other EC-funded projects such as [SmartOpenData](http://www.smartopendata.eu/),  [OpenCube](http://opencube-project.eu/), and [proDataMarket](http://prodatamarket.eu/) contributed to the development of some components.
 
-#### Who is the owner of DataGraft?
+#### Who maintains and operates DataGraft?
 
-Currently DataGraft is owned by the DaPaaS consortium. Discussions are ongoing on future development of DataGraft after the completion of the DaPaaS project at the end of October 2015. Most likely the development will continue under the [proDataMarket project](http://prodatamarket.eu/) or a commercial entity will continue the maintenance and development.
+Currently DataGraft is maintained and operated by the DaPaaS consortium. Discussions are ongoing on future maintenance and development of DataGraft after the completion of the DaPaaS project at the end of October 2015. Most likely the development will continue under the [proDataMarket project](http://prodatamarket.eu/) or a commercial entity will continue the maintenance and development.
 
 #### Is it free to use DataGraft?
 
-For now, yes. Though, there are certain limitations (e.g. hosting/transforming up to 10MB of data). If you find DataGraft useful and you are interested to use it beyond its current limitations please [get in touch with us](http://project.dapaas.eu/dapaas-contact-us). 
+For now, yes. With the following limitations per account:
+
+* Data upload: You can upload CSV files of up to 10MB each, and RDF files of up to 100MB each;
+* Datapages: You can have up to 10 RDF datapages;
+* Persistent storage: up to 2 GB of CSV data, and 1M triples for RDF data.
+
+If you find DataGraft useful and you are interested to use it beyond its current limitations please [get in touch with us](https://datagraft.net/contact/). As the development will progress these limitations may be relaxed for all accounts.
+
+#### What is a datapage?
+
+A datapage is a way to organize data. You can think of a datapage as a Web page with information about a dataset (e.g. metadata, link to download data). Currently we support two types of datapages: CSV datapages and RDF datapages. For technical reasons, at this stage, a CSV datapage can accomodate one input CSV file, however an RDF datapage may accomodate more than one input RDF file (within the limintations mentioned in the previous question).
 
 #### What is the status of the DataGraft development?
 
@@ -73,10 +83,27 @@ DataGraft is currently under iterative development. The current version of DataG
 
 #### What features are planned for future releases?
 
-Future releases of DataGraft will focus on enhancing, among others, the data transformation library.
+Future releases of DataGraft will focus on improving or extending existing features. A random list of TODOs include:
+
+* Read-only transformations
+* Transformation history with undo/redo options
+* Support for various data formats: e.g., JSON, geospatial (GML, Shapefile)
+* Support for multiple files / join datasets
+* Push/pull services for updating outputs in different frequency
+* Better error reporting in transformations
+* Improving functions on tables (vs in pipeline)
+* Dynamic deployment of transformations (cloud-based)
+* (Public/Private) sharing of utility function
+* JavaScript transformation code
+* Predictive transformations, i.e. learn from previous transformations
+* Dealing with streams of data vs static files
+* Better traceability: files, data pages, transformations
+* ...
+
+Interested in any of the above issues? [Get in touch with us](https://datagraft.net/contact/)!
 
 #### I need feature XYZ but it is not supported by DataGraft. What can I do?
-[Contact us](http://project.dapaas.eu/dapaas-contact-us) and we’ll be glad to assist!
+[Contact us](https://datagraft.net/contact/) and we’ll be glad to assist!
 
 #### Whom can I contact if I have further comments and questions about DataGraft?
-Should you have any comments or questions don’t hesitate to [contact us](http://project.dapaas.eu/dapaas-contact-us).
+We have a [Disqus page](https://datagraft.net/feedback/) where you can leave feedback and comments on DataGraft. And you can always [contact us directly](http://project.dapaas.eu/dapaas-contact-us)!
