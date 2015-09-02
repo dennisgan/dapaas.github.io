@@ -17,10 +17,9 @@ DataGraft is aimed at data workers and data developers interested in simplified 
 
 DataGraft was developed to provide better and easier to use tools for data workers and developers who consider existing approaches to data management and access too costly and technically complex.
 
-
 #### Why is DataGraft special?
 
-DataGraft offers an integrated, flexible, and reliable cloud-based solution for data transformation and data access. Key features include flexible management of data transformations (e.g. creation, execution, sharing, reuse) and reliable data services. DataGraft offers GUI and API access to data transformations and data services. 
+DataGraft offers an integrated, flexible, and reliable cloud-based solution for data transformation and data access. Key features include flexible management of data transformations (e.g. interactive creation, execution, sharing, reuse) and reliable data services. DataGraft offers GUI and API access to data transformations and data services. 
 
 #### Are all my data and/or transformations on DataGraft public?
 
@@ -47,6 +46,8 @@ The current version of DataGraft handles tabular data (CSV) and RDF data (i.e. y
 
 Yes, draft documentation is available [here](/documentation/). Documentation will be further improved in the upcoming period.
 
+For background materials on technical aspects related to DataGraft you can check out the [DaPaaS technical reports] (http://project.dapaas.eu/dapaas-reports). A useful presentation can be found [here](http://www.slideshare.net/ruleml2012/industryruleml2015-datagraft).
+
 #### I am a developer and interested to transform and host my data with DataGraft. Do I have API access to DataGraft capabilities?
 
 Yes, most DataGraft capabilities are accessible at the API level. These include programmatic access to datasets and data transformation catalogues (adding, removing datasets and transformations), querying data, and executing data transformations. See the [API documentation](/documentation/) for further details.
@@ -69,7 +70,7 @@ For now, yes. With the following limitations per account:
 
 * Data upload: You can upload CSV files of up to 10MB each, and RDF files of up to 100MB each;
 * Datapages: You can have up to 10 RDF datapages;
-* Persistent storage: up to 2 GB of CSV data, and 1M triples for RDF data.
+* Persistent storage: You can host up to 2 GB of CSV data, and 1M triples for RDF data.
 
 If you find DataGraft useful and you are interested to use it beyond its current limitations please [get in touch with us](https://datagraft.net/contact/). As the development will progress these limitations may be relaxed for all accounts.
 
