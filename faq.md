@@ -80,7 +80,11 @@ A datapage is a way to organize data. You can think of a datapage as a Web page 
 
 #### What is the status of the DataGraft development?
 
-DataGraft is currently under iterative development. The current version of DataGraft is the first release.
+DataGraft is currently under iterative development. The current version of DataGraft is the first beta release.
+
+#### Where can I report issues/bugs?
+
+Since DataGraft is currently in beta, it contains bugs. There are [issues we know of](https://github.com/dapaas/datagraft/issue), and likely others that we don't yet know of. You can report issues [here](https://github.com/dapaas/datagraft/issues/new).
 
 #### What features are planned for future releases?
 
