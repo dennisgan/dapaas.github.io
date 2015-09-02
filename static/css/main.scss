@@ -161,6 +161,7 @@ iframe.dapaas-iframe {
         transition: all 0.5s ease-in-out 0s;
         height:300px;
         width:100%;
+        left: 50%;
 
         img {
             border-radius:3px;
@@ -169,10 +170,9 @@ iframe.dapaas-iframe {
             max-width:90%;
             max-height:100%;
             transition: all 0.5s ease 0s;
-            transform: scale(0.9,0.9) perspective(275px) rotateY(-3deg);
+            transform: scale(1,1) perspective(275px) rotateY(-3deg);
         }
 
-        left: 20%;
         &:first-child {
             left:50%;
             img {
@@ -180,15 +180,27 @@ iframe.dapaas-iframe {
             }
         }
         &:nth-child(2) {
-            left:43%;
+            left:41%;
             img {
-                transform: scale(0.73,0.73) perspective(300px) rotateY(-2deg);
+                transform: scale(0.728,0.728) perspective(300px) rotateY(-2deg);
             }
         }
         &:nth-child(3) {
-            left:35%;
+            left:32%;
             img {
-                transform: scale(0.8,0.8) perspective(300px) rotateY(-2deg);
+                transform: scale(0.796,0.796) perspective(300px) rotateY(-2deg);
+            }
+        }
+        &:nth-child(4) {
+            left:23%;
+            img {
+                transform: scale(0.864,0.864) perspective(300px) rotateY(-2deg);
+            }
+        }
+        &:nth-child(5) {
+            left:14%;
+            img {
+                transform: scale(0.932,0.932) perspective(300px) rotateY(-2deg);
             }
         }
         &:last-child {
@@ -198,6 +210,15 @@ iframe.dapaas-iframe {
                 transform: scale(1,1) perspective(250px) rotateY(-4deg);
             }
         }
+    }
+    .max-width-container {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .first-screen #screenshots-container {
+        transform: scale(1.2,1.2) translateX(10px);
     }
 }
 
