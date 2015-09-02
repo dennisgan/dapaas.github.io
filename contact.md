@@ -13,7 +13,7 @@ function writeRznvy(text) {
 
 #### Thank you for your interest in DataGraft! We’d love to hear from you.
 
-Our project leader is *Dr. Dumitru Roman* of SINTEF ICT (Networked Systems and Services), NORWAY.
+Our project leader is *Dr. Dumitru Roman* of SINTEF ICT (Networked Systems and Services), Norway.
 
 <p>
 You can reach him via email at: <script>writeRznvy('<n uers="znvygb:Qhzvgeh.Ebzna@fvagrs.ab">Qhzvgeh.Ebzna@fvagrs.ab</n>')</script>
