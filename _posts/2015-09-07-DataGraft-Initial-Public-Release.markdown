@@ -2,10 +2,8 @@
 layout: post
 title:  "DataGraft: Initial Public Release"
 date:   2015-09-07
-author: titi
+author: The DataGraft Team
 ---
-
-# DataGraft: Initial Public Release
 
 We are pleased to announce the initial public release of [DataGraft](https://datagraft.net/) - a cloud-based service for data transformation and data access. DataGraft is aimed at data workers and data developers interested in simplified and cost-effective solutions for managing their data. This initial release provides capabilities to:
 
