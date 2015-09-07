@@ -6,22 +6,7 @@ weight: -12
 ---
 <div class="mdl-grid newspost-grid">
 
-{% assign post = site.posts.first %}
-<div class="section-highlight section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-  <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}></header>
-
-  <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card__supporting-text">
-      <h4>{{ post.title }}</h4>
-      {{ post.content | strip_html | truncatewords:50 }}
-    </div>
-    <div class="mdl-card__actions">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
-    </div>
-  </div>
-</div>
-
-{% for post in site.posts offset:1 %}
+{% for post in site.posts offset %}
 
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
       <div class="mdl-card__title" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}>
