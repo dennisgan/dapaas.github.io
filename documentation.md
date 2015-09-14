@@ -14,7 +14,7 @@ weight: 2
 4. [Dashboard](#dashboard)
 5. [The workflow overview](#workflow) 
 6. [Publishing data](#publish)
-7. [Data cleaning and transfotmation](#transform)
+7. [Data cleaning and transformation](#transform)
    * [Transformation metadata](#transform_meta)
    * [Transformation preview](#transform_preview)
    * [Constructing transformation pipeline](#transform_pipeline)
@@ -35,7 +35,7 @@ weight: 2
    * [Building RDF mapping](#rdf)      
    * [Executing transformation](#apply)      
 
-This user guide describes a core functionality of the service and provides you with detailed step-by-step explanation of data publishing and transformation process with help of DataGraft portal. The most demonstrable way to get an overview of what can be done with help of DataGraft platform is to explore data pages and data transformations that other users of this platform chose to share. The two terms mentioned above, **data pages** and **data transformations**, are two main concepts you work with while using DataGraft platform, therefore it may be useful to understand what each of them means in a context of the service. 
+This user guide describes a core functionality of the service and provides you with detailed step-by-step explanation of data publishing and transformation process with help of DataGraft portal. The most demonstrable way to get an overview of what can be done with help of DataGraft platform is to explore data pages and data transformations that other users of this platform chose to share. You can do it here [https://datagraft.net/pages/catalogs/](https://datagraft.net/pages/catalogs/) (sign in is required). The two terms mentioned above, **data pages** and **data transformations**, are two main concepts you work with while using DataGraft platform, therefore it may be useful to understand what each of them means in a context of the service. 
 
 
 
@@ -46,7 +46,7 @@ This user guide describes a core functionality of the service and provides you w
 ![Transformations in DataGraft](/static/images/documentation/transf.jpg)
 
 
-Data transformations are stored with some metadata. The transformation properties include transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section).
+Transformations have some properties including transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section) and stored as transformation metadata.
 
 ### <a name="data_pages"></a>Data pages
 Another type of asset that users may create and share in DataGraft is **data page**. Data pages contain cleaned and transformed data you want to publish. As well as data transformations, data pages are stored with some metadata, including data page name; short description; keywords, describing a data page; owner; creation date and public/private property (see [Publishing data](#publish) section). The latter is defined by data page owner and specifies whether this data page can be explored by other users of a platform or not. 
@@ -61,7 +61,7 @@ Data pages containing RDF also allow you to perform SPARQL querying on data they
 
 ### <a name="explore"></a>Exploring public transformations
 
-To explore data pages and data transformations created by other users switch to the ![Explore tab](/static/images/documentation/explore.png) tab. Here you can see a list of public assets. You may receive basic information about any public data page or data transformation by clicking its name. If in a process of exploring data transformation you find it to be suitable for your needs, you can apply it to your data directly from the explore view. To do so, you just drag and drop your datafile in the white frame labeled "Create data page". If you want to make some changes to the transformation before you use it or just find it interesting and want to explore it in detail, use ![Fork transformation](/static/images/documentation/fork.png) button. The transformation thus will be copied to the list of your transformations.  
+To explore data pages and data transformations created by other users switch to the ![Explore tab](/static/images/documentation/explore.png) tab. Here you can see a list of public assets. You may receive basic information about any public data page or data transformation by clicking its name. If in a process of exploring data transformation you find it to be suitable for your needs, you can apply it to your data directly from the explore view. To do so, you just drag and drop your datafile in the white frame labeled "Create data page". In this way you create a new datapage, but the transformation itself is not added to the list of your assets. If you want to make some changes to the transformation before you use it or just find it interesting and want to explore it in detail, use ![Fork transformation](/static/images/documentation/fork.png) button. The transformation thus will be copied to the list of your transformations.  
 
 
 ![Explore transformation](/static/images/documentation/exploretransformation1.png)
@@ -69,7 +69,7 @@ To explore data pages and data transformations created by other users switch to 
 
 
 ### <a name="user_registration"></a>User Registration
-In order to use public or create your own data pages and transformations through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to the data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) . After you have registered you can change your profile settings by clicking on the user name in top right corner of the website and choosing "My account" menu item.
+In order to use public data pages and transformations or create your assets through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to the data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) . After you have registered you can change your profile settings by clicking on the user name in top right corner of the website and choosing "My account" menu item.
 
 ###	 <a name="dashboard"></a>Dashboard
 User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of data pages and transformations you have created. From here you can search through your assets, delete them, edit their properties; fork and execute transformations and download data associated with data pages.
@@ -192,7 +192,7 @@ Reshape dataset "melts" given dataset in a such way, that each row of the new da
 
 ####  <a name="add_columns"></a>Add Columns
 
-The "Add columns"  results in adding a new column(s) to a given dataset. To add a new column you should specify column name and a value for a new column. This value will be copied into every row within the 	dataset. You may as well populate new column with some custom value. This may be current date, dataset filename, row index or custom Clojure code. Note that the "Expression" field is prioritized, in other words, if you define both value and expression, only expression will be used to get a value for a new column.
+The "Add columns"  results in adding a new column(s) to a given dataset. To add a new column you should specify column name and a value for a new column. This value will be copied into every row within the dataset. Cells in new column may contain some custom values like current date, dataset filename, row index or custom Clojure code. Note that the "Expression" field is prioritized, in other words, if you define both value and expression, only expression will be used to get a value for a new column.
 You are able to add as many columns as you need with one operation. To add one more column simply click "Add more columns"
 
 ![Add Columns function](/static/images/documentation/addcolumnf1.png)
@@ -208,7 +208,7 @@ The "Take/Drop Columns" function narrows given dataset. You may explicitly defin
 
 This function creates a new column in a dataset by applying some transformation to existing column (or columns). To use this function you should specify a name for a new column, define one or several columns you are going to use to obtain new value and specify a function you apply to them. This function can be chosen from a drop-down list, which contains some standard functions and custom utility functions. For your convenience these functions are grouped together based on the type of operation they perform. 
 
-If you think that functionality ordered by standard provided functions is not enough to build your transformation, you may define custom utility functions by yourself using Clojure code (see [Defining Auxiliary Functions](#customfuns) section) or use utility functions written by other users. 
+If you think that functionality ordered by standard provided functions is not enough to build your transformation, you may define custom utility functions by yourself using Clojure code (see [Defining Auxiliary Functions](#customfuns) section). 
 
 Some of the functions may expect input parameters in addition to columns, they will operate on. If this is the case, you may specify such a parameter by pressing ![add parameter](/static/images/documentation/plus.png) icon and entering parameter in a field that appears.
 
