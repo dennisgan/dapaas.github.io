@@ -13,6 +13,7 @@
     var s = document.getElementsByClassName('dapaas-signin');
     for (var i = 0, l = s.length; i < l; ++i) {
         s[i].lastChild.data = name;
+        s[i].setAttribute('href', 'https://datagraft.net/pages/myaccount.jsp');
     }
 
     var navigation = document.getElementById('header-navigation-area');
