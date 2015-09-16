@@ -2,7 +2,7 @@
 
     var cookieName = "user_name";
     
-    if (!document.cookie && document.cookie.indexOf(cookieName) === -1) {
+    if (!document.cookie || document.cookie.indexOf(cookieName) === -1) {
         return;
     }
 
