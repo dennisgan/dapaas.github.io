@@ -54,7 +54,7 @@ For background materials on technical aspects related to DataGraft you can check
 
 #### I am a developer and interested to transform and host my transformations and data  with DataGraft. Do I have API access to DataGraft capabilities?
 
-Yes, DataGraft capabilities are accessible at the API level. These include programmatic access to datasets and data transformation catalogues (adding, removing datasets and transformations), querying data, and executing data transformations. The capabilities offered through the DataGrat.net portal are a subset of capabilities offered at the API level. If you want to benefit from all the features of DataGraft, API level access is recommended. See the [API documentation](/documentation/) for further details.
+Yes, DataGraft capabilities are accessible at the API level. These include programmatic access to datasets and data transformation catalogues (adding, removing datasets and transformations), querying data, and executing data transformations. The capabilities offered through the DataGrat.net portal are a subset of capabilities offered at the API level. If you want to benefit from all the features of DataGraft, API level access is recommended. See the [API documentation](https://datagraft.net/api/) for further details.
 
 #### Who developed DataGraft?
 
