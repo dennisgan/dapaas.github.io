@@ -50,7 +50,7 @@ The current version of DataGraft allows querying the hosted RDF data via SPARQL.
 
 Yes, draft documentation is available [here](/documentation/). Documentation will be further improved in the upcoming period.
 
-For background materials on technical aspects related to DataGraft you can check out the [DaPaaS technical reports] (http://project.dapaas.eu/dapaas-reports). Useful presentations can be found [here](http://www.slideshare.net/dapaasproject/datagraft-dataasaservice-for-open-data) and  [here](http://www.slideshare.net/ruleml2012/industryruleml2015-datagraft).
+For background materials on technical aspects related to DataGraft you can check out the [DaPaaS technical reports](http://project.dapaas.eu/dapaas-reports). Useful presentations can be found [here](http://www.slideshare.net/dapaasproject/datagraft-dataasaservice-for-open-data) and  [here](http://www.slideshare.net/ruleml2012/industryruleml2015-datagraft).
 
 #### I am a developer and interested to transform and host my transformations and data  with DataGraft. Do I have API access to DataGraft capabilities?
 
