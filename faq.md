@@ -108,7 +108,6 @@ Future releases of DataGraft will focus on improving or extending existing featu
 * Dealing with streams of data vs static files
 * Better traceability: files, data pages, transformations
 * Geospatial processing of data: radius around point, radius around polygon, data within polygon, squares, areas
-* ...
 
 Interested in any of the above issues? [Get in touch with us](https://datagraft.net/contact/)!
 
