@@ -13,7 +13,7 @@ DataGraft is a cloud-based service for data transformation and data access.
 
 DataGraft is aimed at data workers and data developers interested in simplified and cost-effective solutions for managing their data, with a focus on data transformation, data hosting, and data access. Example users include open data publishers, linked data developers, data scientists.
 
-#### Why was DataGraft developed?
+#### Why DataGraft?
 
 DataGraft was developed to provide better and easier to use tools for data workers and developers who consider existing approaches to data transformation, hosting, and access too costly and technically complex.
 
