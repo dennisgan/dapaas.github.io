@@ -48,6 +48,7 @@ This user guide describes a core functionality of the service and provides you w
 
 Transformations have some properties including transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section) and stored as transformation metadata.
 
+
 ### <a name="data_pages"></a>Data pages
 Another type of asset that users may create and share in DataGraft is **data page**. Data pages contain cleaned and transformed data you want to publish. As well as data transformations, data pages are stored with some metadata, including data page name; short description; keywords, describing a data page; owner; creation date and public/private property (see [Publishing data](#publish) section). The latter is defined by data page owner and specifies whether this data page can be explored by other users of a platform or not. 
 
@@ -120,9 +121,9 @@ However, in most cases you still need to process your data before publishing it.
 ##  <a name="transform"></a>Data cleaning and transformation
 This section explains how tabular data is transformed in DataGraft platform and gives you the best strategies for data transformation.
 
-At the basis of DataGraft data transformations there lies a Grafter DSL (Domain Specific Language), which in its turn is implemented in Clojure. Therefore, to take maximum advantage of the service, one should be acquainted with mentioned languages. However number of transformations, depending on their complexity, can be done through intuitive and user-friendly GUI without any coding.
+At the basis of DataGraft data transformations there lies a [Grafter DSL](http://grafter.org/about/index.html) (Domain Specific Language), which in its turn is implemented in Clojure. Therefore, to take maximum advantage of the service, one should be acquainted with mentioned languages. However number of transformations, depending on their complexity, can be done through intuitive and user-friendly GUI without any coding.
 
-
+There are several ways you can create a transformation on DataGraft. The first option is to go to the Transform tab and click the plus icon in the right bottom corner to create a new transformation. Please note, that in this case created transformation will not appear in a list of your transformations unless you press the save button explicitly. Another option is create a transformation as a copy of existing transformation from the list of your transformations or public transformations created by other users(fork transformation). Forking a transformation doesn't save a new transformation automatically as well. There is also a third option for creating a new transformation: after you have uploaded a tabular data you have an option of creating a datapage using  "Create using new transformation" button (more details can be found in[Publishing data](#publish) section). This action leads to creating and saving a new transformation automatically.
 
 ###  <a name="transform_meta"></a>Transformation metadata
 The first tab seen in the transformation creation window is "Metadata". Here user defines transformation title and gives a short description of how this transformation processes targeted data. If you wish to share transformation, it is possible to expose it as public. In this case other platform users will be able to explore and use given transformation.
@@ -210,14 +211,24 @@ This function creates a new column in a dataset by applying some transformation 
 
 If you think that functionality ordered by standard provided functions is not enough to build your transformation, you may define custom utility functions by yourself using Clojure code (see [Defining Auxiliary Functions](#customfuns) section). 
 
-Some of the functions may expect input parameters in addition to columns, they will operate on. If this is the case, you may specify such a parameter by pressing ![add parameter](/static/images/documentation/plus.png) icon and entering parameter in a field that appears.
-
 ![Tip](/static/images/documentation/magic.png)**_Tips and tricks:_**
 
 
 *One powerful feature of derive-column and similar pipeline functions is possibility to combine functions you apply to columns in the same way you combine functions in pipelines. Essentially, these are pipelines inside your dataset manipulation pipeline. To add one more "internal" function into your pipeline function, click ![Compose](/static/images/documentation/compose.png) button. Note, that function order is significant in this case. Functions are composed as they appear from top to down. To remove a function from composition pipeline click trash icon  ![Remove function](/static/images/documentation/trash.png) next to the function you wish to delete.*
 
 
+Some of the functions may expect input parameters in addition to columns, they will operate on. If this is the case, you may specify such a parameter by pressing ![add parameter](/static/images/documentation/plus.png) icon and entering parameter in a field that appears.
+
+
+
+![Example](/static/images/documentation/bulb.png)  **_Example:_**
+
+*To demonstrate a way in which functions with parameters can be used in DataGraft, let's consider one of such functions -- _join-with_. This function joins collection of values into one string using custom separator specified as function parameter. Using this function inside derive-column pipeline function you may derive a new column as a result of merging several other columns. For example, you may have several fields describing address in your dataset and wish to obtain a column containing full address by joining elements using comma as separator. Original dataset looks as follows:*
+![Original  data](/static/images/documentation/join_with_1.png)
+*Now you may specify the way you wish address fields to be joined. For this define a name for a column, that will hold obtained address, choose columns to compose address from in necessary order, choose function join-with from a list of function and specify a desired separator as its parameter*
+![Parameters](/static/images/documentation/join_with_2.png)
+*After this function is applied to your dataset you will get a new column called address containing joined values:*
+![Result](/static/images/documentation/join_with_3.png)
 ####  <a name="mapc"></a>Map Columns
 
 This method allows you to apply some transformation to column and put the modified value back to the same column. In parameter list you must specify a column you wish to change and a function that will be used to perform this transformation. You may add as many column-function pairs as you need. 
@@ -295,7 +306,7 @@ However to specify text transformations you may need to perform on your data, yo
 
 
 ####  <a name="prefixers"></a>Creating and Editing Prefixers
-One special type of utility functions you may define is **prefixer** -- function that adds some prefix to its argument in a such way, that the result represents an URI. This is something you may need in constructing RDF mapping part. If all you need is just constructing URI nodes by adding the same type of prefix to all values in a column, you should define prefixers in "Edit RDF mapping prefixes" dialog (see [Building RDF Mapping](#rdf) section). However, if you need to add some logic in assigning prefixes depending on column values, you should define prefixer functions here in pipeline view. 
+One special type of utility functions you may define is **prefixer** -- function that expects one argument and adds some prefix to this argument in a such way, that the result represents an URI. This is something you may need in constructing RDF mapping part. If all you need is just constructing URI nodes by adding the same type of prefix to all values in a column, you should define prefixers in "Edit RDF mapping prefixes" dialog (see [Building RDF Mapping](#rdf) section). However, if you need to add some logic in assigning prefixes depending on column values, you should define prefixer functions here in pipeline view. 
 You may create and edit prefixers in the "Edit prefixers" window. To see this window  press ![Edit prefixers](/static/images/documentation/editprefixers.png) button in the pipeline view. Here you can see the list of all prefixers you created for current transformation. You may add a new prefixer by specifying its name and URI and pressing ![Add prefixer](/static/images/documentation/addprefixer.png)  button. Created prefixer will instantly appear in the list of prefixers above. It is possible as well to create prefixer by adding some string to the existing one. In this case select a prefixer you wish to use as a base one, enter new prefixer name and string value and press ![Add prefixer from base](/static/images/documentation/addprefixerfrom.png). Now, if the base prefixer is changed, changes will be as well applied to the child prefixers. To remove prefixers select all prefixers you wish to remove and press ![Remove prefixer](/static/images/documentation/removeprefixers.png).
 
 ###  <a name="rdf"></a>Building RDF Mapping 
