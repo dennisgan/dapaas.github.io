@@ -34,7 +34,15 @@ weight: 2
       * [Creating and Editing Prefixers](#prefixers)
    * [Building RDF mapping](#rdf)      
    * [Executing transformation](#apply)      
-
+8. [Data visualization portal](#visual)
+   * [Create visualization portal](#setup)
+   * [Configure widget](#configure)
+      * [Tabular view](#tabular)
+      * [Line chart](#linechart)
+      * [Bar chart](#barchart)
+      * [Pie chart](#piechart)
+      * [Scatter chart](#scatterchart)
+      * [Map](#map)
 This user guide describes a core functionality of the service and provides you with detailed step-by-step explanation of data publishing and transformation process with help of DataGraft portal. The most demonstrable way to get an overview of what can be done with help of DataGraft platform is to explore data pages and data transformations that other users of this platform chose to share. You can do it here [https://datagraft.net/pages/catalogs/](https://datagraft.net/pages/catalogs/) (sign in is required). The two terms mentioned above, **data pages** and **data transformations**, are two main concepts you work with while using DataGraft platform, therefore it may be useful to understand what each of them means in a context of the service. 
 
 
@@ -48,21 +56,30 @@ This user guide describes a core functionality of the service and provides you w
 
 Transformations have some properties including transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section) and stored as transformation metadata.
 
+You can see the transformation metadata and get transformation details including pipeline overview, rdf mapping and clojure code if  you click on a transformation name in the list of [public](#explore) or [your](#dashboard) transformations. This may help you to get an understanding of what input data does this transformation require and the way this data is cleaned and transformed.
+
+![Read-only preview of transformation](/static/images/documentation/readonly.png)
+
+Transformations in this view are shown in read-only mode. If you wish to make changes to transformation please click <span style="color:blue; font-family:Georgia; font-size:2em;">"Edit"</span> button for transformations that you own or <span style="color:blue; font-family:Georgia; font-size:2em;">"Fork"</span> button to copy and edit a public transformation.
+
+For further information on how transformations can be created and used on your data please refer to the  [Data cleaning and transformation](#transform) section.
 
 ### <a name="data_pages"></a>Data pages
 Another type of asset that users may create and share in DataGraft is **data page**. Data pages contain cleaned and transformed data you want to publish. As well as data transformations, data pages are stored with some metadata, including data page name; short description; keywords, describing a data page; owner; creation date and public/private property (see [Publishing data](#publish) section). The latter is defined by data page owner and specifies whether this data page can be explored by other users of a platform or not. 
 
 <a name="datapagemeta"></a>![Data page properties](/static/images/documentation/datapagemeta.png)
 
-Users that have access to the data page (i.e. just owners in case of private pages and everyone else for public pages) can locally download information associated with a data page in a raw tabular format by pressing ![Export row data](/static/images/documentation/exportraw.png) button; or as RDF by pressing ![Export RDF data](/static/images/documentation/exportrdf.png). The list of supported RDF formats includes RDF/XML(.rdf), n-triple(.nt), turtle(.ttl), n3(.n3), nquads(.nq), RDF/JSON(.rj).
+Users that have access to the data page (i.e. just owners in case of private pages and everyone else for public pages) can locally download information associated with a data page in a raw tabular format by pressing <span style="color:blue; font-family:Georgia; font-size:2em;">"Export row data"</span> button; or as RDF by pressing <span style="color:blue; font-family:Georgia; font-size:2em;">"Export RDF data"</span>. The list of supported RDF formats includes RDF/XML(.rdf), n-triple(.nt), turtle(.ttl), n3(.n3), nquads(.nq), RDF/JSON(.rj).
 
-Data pages containing RDF also allow you to perform SPARQL querying on data they contain.  The example of such query and selection results are shown below.
+Data pages containing RDF also allow you to perform [SPARQL](http://www.w3.org/TR/sparql11-query/) querying on data they contain.  The example of such query and selection results are shown below.
 
 ![Export RDF data](/static/images/documentation/sparql.png)
 
+In addition, data pages may be provided with data visualizations. To see the details on data visualizations refer to[Data visualizations](#visual) section.
+
 ### <a name="explore"></a>Exploring public transformations
 
-To explore data pages and data transformations created by other users switch to the ![Explore tab](/static/images/documentation/explore.png) tab. Here you can see a list of public assets. You may receive basic information about any public data page or data transformation by clicking its name. If in a process of exploring data transformation you find it to be suitable for your needs, you can apply it to your data directly from the explore view. To do so, you just drag and drop your datafile in the white frame labeled "Create data page". In this way you create a new datapage, but the transformation itself is not added to the list of your assets. If you want to make some changes to the transformation before you use it or just find it interesting and want to explore it in detail, use ![Fork transformation](/static/images/documentation/fork.png) button. The transformation thus will be copied to the list of your transformations.  
+To explore data pages and data transformations created by other users switch to the  <span style="color:blue; font-family:Georgia; font-size:2em;">"Explore"</span> tab. Here you can see a list of public assets. You may receive basic information about any public data page or data transformation by clicking its name. If in a process of exploring data transformation you find it to be suitable for your needs, you can apply it to your data directly from the explore view. To do so, you just drag and drop your datafile in the white frame labeled "Create data page". In this way you create a new datapage, but the transformation itself is not added to the list of your assets. If you want to make some changes to the transformation before you use it or just find it interesting and want to explore it in detail, use <span style="color:blue; font-family:Georgia; font-size:2em;">"Fork transformation"</span> button. The transformation thus will be copied to the list of your transformations.  
 
 
 ![Explore transformation](/static/images/documentation/exploretransformation1.png)
@@ -70,7 +87,7 @@ To explore data pages and data transformations created by other users switch to 
 
 
 ### <a name="user_registration"></a>User Registration
-In order to use public data pages and transformations or create your assets through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to the data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) . After you have registered you can change your profile settings by clicking on the user name in top right corner of the website and choosing "My account" menu item.
+In order to use public data pages and transformations or create your assets through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to the data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) . After you have registered you can change your profile settings by clicking on the user name in top right corner of the website and choosing <span style="color:blue; font-family:Georgia; font-size:2em;">"My account"</span> menu item.
 
 ###	 <a name="dashboard"></a>Dashboard
 User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of data pages and transformations you have created. From here you can search through your assets, delete them, edit their properties; fork and execute transformations and download data associated with data pages.
@@ -100,7 +117,7 @@ The following video demonstrates how Grafterizer can be used to clean and transf
 
 
  
-Publishing data with help of DataGraft platform is a rather simple process. You can create a data page from several different points. You may start by switching to a ![Publish tab](/static/images/documentation/publish.png) tab in a main menu. The first thing you do when creating a data page this way is uploading data. To do so, you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
+Publishing data with help of DataGraft platform is a rather simple process. You can create a data page from several different points. You may start by switching to a <span style="color:blue; font-family:Georgia; font-size:2em;">"Publish"</span> tab in a main menu. The first thing you do when creating a data page this way is uploading data. To do so, you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
 ![Upload data](/static/images/documentation/upload.png)
 
 After data is succesfully uploaded (this is indicated by a green mark in the top right corner of a file icon) you have several options:
@@ -112,7 +129,7 @@ After data is succesfully uploaded (this is indicated by a green mark in the top
 
 	
 	
-Let's go through the most simple scenario by choosing the first alternative. To do this you just click ![Create data page from raw data](/static/images/documentation/createraw.png) button. This automatically takes you to the next page where you specify data page properties(see [Data page properties](#datapagemeta)). After everything is in order, you simply click  ![Create datapage](/static/images/documentation/createdatapage.png). And that's it, you have just created your very first data page. Now you (and other users in case if you defined this data page as public) have access to the data page, are able to download associated data, add more information and features to the created asset.
+Let's go through the most simple scenario by choosing the first alternative. To do this you just click <span style="color:blue; font-family:Georgia; font-size:2em;">"Publish"</span> button. This automatically takes you to the next page where you specify data page properties(see [Data page properties](#datapagemeta)). After everything is in order, you simply click  <span style="color:blue; font-family:Georgia; font-size:2em;">"Publish"</span>. And that's it, you have just created your very first data page. Now you (and other users in case if you defined this data page as public) have access to the data page, are able to download associated data, add more information and features to the created asset.
 
 
 However, in most cases you still need to process your data before publishing it. In this case you should use the transformation service. By clicking ![Create using new transformation](/static/images/documentation/createusingnewtransformation.png) button you may start transforming your data. Details on how data transformations are created are given in Section [Data cleaning and transformation](#transform).
@@ -149,12 +166,14 @@ Data cleaning and transformation in DataGraft platform is performed with help of
 
 The first implicit step of every transformation pipeline is getting the very first pipeline input. Therefore, each transformation starts from reading a dataset from an uploaded file. However, you do not need to include this step into your pipeline manually, since this action is performed automatically for each transformation.
 
+
 To add a first transformation step click the ![Add step](/static/images/documentation/add.png) button next to the pipeline
 
 ![Pipeline view](/static/images/documentation/addpipefunction.png)
 
 
 Now you can see the list of functions you may use to modify uploaded dataset. Available functions are logically grouped according to the type of effect they have on the data. Consequently, OPERATIONS ON COLUMNS add, remove or modify dataset columns, while OPERATIONS ON ROWS extract certain rows from a dataset based on row numbers or some condition that user defines. Operations "Make dataset" and "Reshape dataset" affect the entire dataset.
+
 
 ![Available function list](/static/images/documentation/functionlist.png)
 
@@ -164,6 +183,10 @@ Now you can see the list of functions you may use to modify uploaded dataset. Av
 
 Once you have added a new function to the pipeline, it will instantly appear in the pipeline view. You are free to change function parameters any time you need it by simply clicking on the correspondent function icon. To get a short information about the actions performed by this function you may just hover mouse pointer over its name. In many cases function order significantly affects the transformation result. It is very simple to change this order by just dragging function icons along the pipeline. To remove a function click ![Remove function](/static/images/documentation/minus.png)  button next to the function you would like to remove.
  
+In DataGraft you are able to see the partial preview of the transformation on each step. Last option makes it possible to see how the transformed data looks like for every stage of transformation.
+
+![Partial preview](/static/images/documentation/partials.png)
+
  The following sections provide you with detailed guidelines for each function usage.
 
   
@@ -283,7 +306,7 @@ Some complex transformations cannot be done with help of operations described ab
 
 Creating utility functions for transformations is a great way to encapsulate the logic of data modifications, thus making them independent of data they are applied to. For instance, if to convert data in several dataset columns you use the same formula, you can define a function, that performs all the necessary calculations based on its input parameters and call it any time and on any data you need. 
 
-To create your custom function use ![Edit utility functions](/static/images/documentation/editutility.png)  button. In the window that opens you can see the list of available functions at the left side and code editor at the right side.
+To create your custom function use <span style="color:blue; font-family:Georgia; font-size:2em;">"Edit utility functions"</span> button. In the window that opens you can see the list of available functions at the left side and code editor at the right side.
 
 ![Create custom utility function](/static/images/documentation/createcustom.png)
 
@@ -307,7 +330,7 @@ However to specify text transformations you may need to perform on your data, yo
 
 ####  <a name="prefixers"></a>Creating and Editing Prefixers
 One special type of utility functions you may define is **prefixer** -- function that expects one argument and adds some prefix to this argument in a such way, that the result represents an URI. This is something you may need in constructing RDF mapping part. If all you need is just constructing URI nodes by adding the same type of prefix to all values in a column, you should define prefixers in "Edit RDF mapping prefixes" dialog (see [Building RDF Mapping](#rdf) section). However, if you need to add some logic in assigning prefixes depending on column values, you should define prefixer functions here in pipeline view. 
-You may create and edit prefixers in the "Edit prefixers" window. To see this window  press ![Edit prefixers](/static/images/documentation/editprefixers.png) button in the pipeline view. Here you can see the list of all prefixers you created for current transformation. You may add a new prefixer by specifying its name and URI and pressing ![Add prefixer](/static/images/documentation/addprefixer.png)  button. Created prefixer will instantly appear in the list of prefixers above. It is possible as well to create prefixer by adding some string to the existing one. In this case select a prefixer you wish to use as a base one, enter new prefixer name and string value and press ![Add prefixer from base](/static/images/documentation/addprefixerfrom.png). Now, if the base prefixer is changed, changes will be as well applied to the child prefixers. To remove prefixers select all prefixers you wish to remove and press ![Remove prefixer](/static/images/documentation/removeprefixers.png).
+You may create and edit prefixers in the "Edit prefixers" window. To see this window  press <span style="color:blue; font-family:Georgia; font-size:2em;">"Edit prefixers"</span> button in the pipeline view. Here you can see the list of all prefixers you created for current transformation. You may add a new prefixer by specifying its name and URI and pressing <span style="color:blue; font-family:Georgia; font-size:2em;">"Add prefixer"</span>  button. Created prefixer will instantly appear in the list of prefixers above. It is possible as well to create prefixer by adding some string to the existing one. In this case select a prefixer you wish to use as a base one, enter new prefixer name and string value and press ![Add prefixer from base](/static/images/documentation/addprefixerfrom.png). Now, if the base prefixer is changed, changes will be as well applied to the child prefixers. To remove prefixers select all prefixers you wish to remove and press <span style="color:blue; font-family:Georgia; font-size:2em;">"Remove prefixer"</span>.
 
 ###  <a name="rdf"></a>Building RDF Mapping 
 
@@ -326,9 +349,98 @@ Now you can start to create, edit and remove RDF nodes and their properties. The
 
 
 
-After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](/static/images/documentation/gear.png) icon. After you did this you can see a dialog, where you can choose between publishing transformed data as a data page and downloading results locally on your computer.
+After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](/static/images/documentation/gear.png) icon. After you did this you can see a dialog, where you have few options:
 
  
-![Apply transformation](/static/images/documentation/applytransformation.png)
+![Apply transformation](/static/images/documentation/transform.png)
+
+1. Execute and save. By pressing this button you can publish transformed data as a data page 
+2. Execute and retreive. By pressing this button you can  download the results locally on your computer as rdf data(n-triples)
+3. Download executable. By pressing this button you can  download the executable jar file on your computer. This file can then be used to transform datasets locally instead of in the cloud. The JAR file can be ran by using the command line interface from the location where the file is located as follows:
+
+![jar](/static/images/documentation/jar.png)
+ 
 
 Alternatively transformations can be executed from the "Dashboard" and "Explore" views as it have been discussed in sections [Dashboard](#dashboard) and [Exploring public transformations](#explore)
+
+###  <a name="visual"></a>Data visualization portal
+
+DataGraft allows publishers to create visualization portals in order to display data in graphical manner. The portal is identified by unique identified, has a title and consist of one or more widgets.
+Each widget displayed in portal consist of 4 components: title of the widget, description of the data represented, visualization part, summary. The following image shows how widget looks like on the portal page and what are the four part of it:
+
+![visualization widget](/static/images/documentation/widget.png)
+
+####  <a name="setup"></a>Create visualization portal
+
+The process for creating portal is accomplished by using ‘Setup visualization’ section in edit data page.
+
+
+![Setup visualization](/static/images/documentation/setup.png)
+
+The ID of the page is unique identifier in DataGraft to identify this portal. The default value is auto generate based on the data page name, but can be changed during edit process. Title property specifies title of the portal web page. Widgets table shows currently configured visualization widgets in the portal. For each widget there is an option to edit ![Edit](/static/images/documentation/edit.png) and delete ![Delete](/static/images/documentation/delete.png). 
+
+Adding new widget to the portal is accomplished using  button. Both edit and add new widget buttons lead you to the configure widget dialog, where you can edit properties of the widget and data subset used to generate visualization.
+
+####  <a name="configure"></a>Configure widget
+
+![Configure widget](/static/images/documentation/configure.png)
+
+The configure widget allows you to specify 4 components of the each widget: title, description, summary and visual component along with the data subset for the visual component. Currently the platform supports the following widgets types: tabular view, line char, bar chart, pie chart, scatter chart, bubble chart, maps. 
+
+Each type is described later in this section.
+
+The query section requires valid SPARQL query which will retrieve data subset from the repository and use this data as a input for the visualization.
+
+There is option to preview how the widget will look like in the configure dialog by using ‘preview’ button.
+
+#####  <a name="tabular"></a>Tabular view
+
+![Tabular view](/static/images/documentation/tabular.png)
+
+Tabular view is the simplest possible view and it shows data as a browsable table, similar to spreadsheet. This view has a pagination control and search capability. View can show any data from any valid SPARQL query.
+
+#####  <a name="linechart"></a>Line chart
+
+![Line chart](/static/images/documentation/linechart.png)
+
+This view presents data as a line chart. View support single or multiple lines on the same chart. This view requires SPARQL query with ‘title’ column, which will be used as an X coordinate and all other columns are treated as numeric values of Y coordinate in the chart. Typical query looks like this:
+
+SELECT ?title ?line_1_values ?line_2_values WHERE { … }
+
+
+
+#####  <a name="barchart"></a>Bar chart
+
+![Bar chart](/static/images/documentation/barchart.png)
+
+This view presents data as a bar chart. View support single or multiple bars series on the same chart. This view requires SPARQL query with ‘title’ column, which will be used as an X coordinate and all other columns are treated as numeric values of Y coordinate in the chart. Typical query looks like this:
+
+SELECT ?title ?bar_series_1_values ?bar_series_2_values WHERE { … }
+
+#####  <a name="piechart"></a>Pie chart
+
+![Pie chart](/static/images/documentation/piechart.png)
+
+This view presents data as a pie chart. View support single or multiple pies on the same chart. This view requires SPARQL query with ‘title’ column, which will be used as an X coordinate and all other columns are treated as numeric values of Y coordinate in the chart. Typical query looks like this:
+
+SELECT ?title ?pie_series_1_values ?pie_series_2_values WHERE { … }
+
+#####  <a name="scatterchart"></a>Scatter chart
+
+![Scatter chart](/static/images/documentation/scatterchart.png)
+
+This view presents data as a scatter chart. View support single or multiple series on the same chart. This view requires SPARQL query with ‘title’ column, which will be used as an X coordinate and all other columns are treated as numeric values of Y coordinate in the chart. Typical query looks like this:
+
+SELECT ?title ?series_1_values ?series_2_values WHERE { … }
+
+
+#####  <a name="map"></a>Map
+
+![Map](/static/images/documentation/map.png)
+
+Map view shows geo aware data on the interactive map. This view support multidimensional data which is shown as a popup on the map location.
+
+This view requires SPARQL query with ‘lat’ and ‘lng’ columns, which will be used as coordinates on the map and title column, which will be used as a title for the location. All other columns are treated as additional metadata for the location. Typical query looks like this:
+
+SELECT ?title ?lat ?lng ?more_data_1 ?more_data_2 WHERE { … }
+
